@@ -9,7 +9,6 @@ impl HashSet {
     fn insert(&mut self, val: i32) {
         let mut found: bool = false;
         for i in &self.data {
-
             if *i == val {
                 found = true;
                 break;

@@ -178,3 +178,15 @@ path = "src/trait1.rs"
 name = "generics"
 path = "src/generics.rs"
 
+[[bin]]
+name = "dangling_ref"
+path = "src/dangling_ref.rs"
+
+[[bin]]
+name = "lifetime"
+path = "src/lifetime.rs"
+
+[[bin]]
+name = "command_args"
+path = "src/command_args.rs"
+

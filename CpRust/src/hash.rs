@@ -16,6 +16,7 @@ fn main() {
         .expect("NO Values were passed!");
     let option: i32 = input.trim().parse().unwrap();
     input.clear();
+
     if option == 1 {
         for i in hm {
             println!("{}", i.0);
