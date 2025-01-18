@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libsecond_pattern1-9ab0f9720e78b335.rmeta: src/second_pattern1.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libsecond_pattern1-9ab0f9720e78b335.rmeta: src/second_pattern1.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/second_pattern1-9ab0f9720e78b335.d: src/second_pattern1.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/second_pattern1-9ab0f9720e78b335.d: src/second_pattern1.rs Cargo.toml
 
 src/second_pattern1.rs:
 Cargo.toml:

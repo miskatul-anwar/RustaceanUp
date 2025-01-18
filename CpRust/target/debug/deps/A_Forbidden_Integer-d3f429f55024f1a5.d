@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libA_Forbidden_Integer-d3f429f55024f1a5.rmeta: src/A_Forbidden_Integer.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libA_Forbidden_Integer-d3f429f55024f1a5.rmeta: src/A_Forbidden_Integer.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/A_Forbidden_Integer-d3f429f55024f1a5.d: src/A_Forbidden_Integer.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/A_Forbidden_Integer-d3f429f55024f1a5.d: src/A_Forbidden_Integer.rs Cargo.toml
 
 src/A_Forbidden_Integer.rs:
 Cargo.toml:

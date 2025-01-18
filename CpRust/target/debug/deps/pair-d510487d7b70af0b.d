@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libpair-d510487d7b70af0b.rmeta: src/pair.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libpair-d510487d7b70af0b.rmeta: src/pair.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/pair-d510487d7b70af0b.d: src/pair.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/pair-d510487d7b70af0b.d: src/pair.rs Cargo.toml
 
 src/pair.rs:
 Cargo.toml:

@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libreplace-00f7650477fad2ba.rmeta: src/replace.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libreplace-00f7650477fad2ba.rmeta: src/replace.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/replace-00f7650477fad2ba.d: src/replace.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/replace-00f7650477fad2ba.d: src/replace.rs Cargo.toml
 
 src/replace.rs:
 Cargo.toml:

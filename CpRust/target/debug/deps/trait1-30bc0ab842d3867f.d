@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libtrait1-30bc0ab842d3867f.rmeta: src/trait1.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libtrait1-30bc0ab842d3867f.rmeta: src/trait1.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/trait1-30bc0ab842d3867f.d: src/trait1.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/trait1-30bc0ab842d3867f.d: src/trait1.rs Cargo.toml
 
 src/trait1.rs:
 Cargo.toml:

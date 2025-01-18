@@ -190,3 +190,7 @@ path = "src/lifetime.rs"
 name = "command_args"
 path = "src/command_args.rs"
 
+[[bin]]
+name = "anonymous"
+path = "src/anonymous.rs"
+

@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libvec-94dfe1db7d0aa0fe.rmeta: src/vec.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libvec-94dfe1db7d0aa0fe.rmeta: src/vec.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/vec-94dfe1db7d0aa0fe.d: src/vec.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/vec-94dfe1db7d0aa0fe.d: src/vec.rs Cargo.toml
 
 src/vec.rs:
 Cargo.toml:

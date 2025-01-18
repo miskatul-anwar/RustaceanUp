@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libA_Forked-fa9e03052eb4253f.rmeta: src/A_Forked.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libA_Forked-fa9e03052eb4253f.rmeta: src/A_Forked.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/A_Forked-fa9e03052eb4253f.d: src/A_Forked.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/A_Forked-fa9e03052eb4253f.d: src/A_Forked.rs Cargo.toml
 
 src/A_Forked.rs:
 Cargo.toml:

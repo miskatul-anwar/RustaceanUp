@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libmap_prac-cc3f474658f7a42d.rmeta: src/map_prac.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libmap_prac-cc3f474658f7a42d.rmeta: src/map_prac.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/map_prac-cc3f474658f7a42d.d: src/map_prac.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/map_prac-cc3f474658f7a42d.d: src/map_prac.rs Cargo.toml
 
 src/map_prac.rs:
 Cargo.toml:

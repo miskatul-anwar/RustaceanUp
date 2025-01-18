@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libkeycheck-bd352966c33201f0.rmeta: src/keycheck.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libkeycheck-bd352966c33201f0.rmeta: src/keycheck.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/keycheck-bd352966c33201f0.d: src/keycheck.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/keycheck-bd352966c33201f0.d: src/keycheck.rs Cargo.toml
 
 src/keycheck.rs:
 Cargo.toml:

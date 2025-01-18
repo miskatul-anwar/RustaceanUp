@@ -1,6 +1,6 @@
-/home/miskat/CpRust/target/debug/deps/libstring_ds-a0302fc3fc523f33.rmeta: src/string_ds.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/libstring_ds-a0302fc3fc523f33.rmeta: src/string_ds.rs Cargo.toml
 
-/home/miskat/CpRust/target/debug/deps/string_ds-a0302fc3fc523f33.d: src/string_ds.rs Cargo.toml
+/home/miskat/CS/RustaceanUp/CpRust/target/debug/deps/string_ds-a0302fc3fc523f33.d: src/string_ds.rs Cargo.toml
 
 src/string_ds.rs:
 Cargo.toml:
