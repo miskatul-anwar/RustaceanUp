@@ -198,3 +198,10 @@ path = "src/anonymous.rs"
 name = "closures1"
 path = "src/closures1.rs"
 
+[[bin]]
+name = "box1"
+path = "src/box1.rs"
+
+[[bin]]
+name = "list_box2"
+path = "src/list_box2.rs"
