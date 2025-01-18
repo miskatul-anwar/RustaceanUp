@@ -194,3 +194,7 @@ path = "src/command_args.rs"
 name = "anonymous"
 path = "src/anonymous.rs"
 
+[[bin]]
+name = "closures1"
+path = "src/closures1.rs"
+
