@@ -205,3 +205,19 @@ path = "src/box1.rs"
 [[bin]]
 name = "list_box2"
 path = "src/list_box2.rs"
+[[bin]]
+name = "lcs"
+path = "src/lcs.rs"
+
+[[bin]]
+name = "pointers"
+path = "src/pointers.rs"
+
+[[bin]]
+name = "sin_cos_func"
+path = "src/sin_cos_func.rs"
+
+[[bin]]
+name = "system_time"
+path = "src/system_time.rs"
+
