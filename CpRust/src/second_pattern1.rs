@@ -17,7 +17,7 @@ fn pattern_match(t: Vec<char>, p: Vec<char>) {
         q.push(t[0..i].iter().collect());
     }
 
-    while s != p.concat() {}
+    // while s != p.concat() {}
 }
 
 fn main() {}

@@ -1,0 +1,39 @@
+[package]
+name = "dsa"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+text_io = "0.1.12"
+[[bin]]
+name = "3-3-4-count_and_compare"
+path = "src/3-3-4-count_and_compare.rs"
+
+[[bin]]
+name = "4-3-2-implementing_stack"
+path = "src/4-3-2-implementing_stack.rs"
+
+[[bin]]
+name = "4-3-3-balanced-parantheses"
+path = "src/4-3-3-balanced-parantheses.rs"
+
+[[bin]]
+name = "4-3-2-divide_by_two"
+path = "src/4-3-2-divide_by_two.rs"
+
+[[bin]]
+name = "4-4-3_hot_potato"
+path = "src/4-4-3_hot_potato.rs"
+
+[[bin]]
+name = "4-5-3_palindrome_check"
+path = "src/4-5-3_palindrome_check.rs"
+
+[[bin]]
+name = "Valid_parentheses"
+path = "src/Valid_parentheses.rs"
+
+[[bin]]
+name = "7-11-counting_sort"
+path = "src/7-11-counting_sort.rs"
+

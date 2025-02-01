@@ -3,221 +3,271 @@ name = "cp_template"
 version = "0.1.0"
 edition = "2021"
 
+
 [dependencies]
-# Fast input and output utilities
-text_io = "0.1.12" # Optional: For quick input parsing
-
-# Numerical utilities for number theory, primes, gcd, etc.
+text_io = "0.1.12"
 num = "0.4"
-
-# Combinatorics and iterator utilities
 itertools = "0.14.0"
-
-# Random number generation for testing solutions locally
-rand = "0.8"
-
-# Custom assertions for testing edge cases in CP
+rand = "0.9.0"
 assert_cmd = "2.0"
-
-# Regex for string processing
 regex = "1.11.1"
 
-# Optional crates for debugging or development
-# Uncomment the following if needed
-# log = "0.4"
-# env_logger = "0.10"
 
 [[bin]]
 name = "code"
 path = "src/code.rs"
 
+
 [[bin]]
 name = "vec"
 path = "src/vec.rs"
+
 
 [[bin]]
 name = "hash"
 path = "src/hash.rs"
 
+
 [[bin]]
 name = "keycheck"
 path = "src/keycheck.rs"
 
+
 [[bin]]
 name = "remove_key"
 path = "src/remove_key.rs"
+
+
 [[bin]]
 name = "hash_set"
 path = "src/hash_set.rs"
+
 
 [[bin]]
 name = "linked_list"
 path = "src/linked_list.rs"
 
+
 [[bin]]
 name = "cosine_similarity"
 path = "src/cosine_similarity.rs"
+
 
 [[bin]]
 name = "map_prac"
 path = "src/map_prac.rs"
 
+
 [[bin]]
 name = "reverse"
 path = "src/reverse.rs"
+
 
 [[bin]]
 name = "hash_map_inc"
 path = "src/hash_map_inc.rs"
 
+
 [[bin]]
 name = "A_Array_coloring"
 path = "src/A_Array_coloring.rs"
+
 
 [[bin]]
 name = "A_Desorting"
 path = "src/A_Desorting.rs"
 
+
 [[bin]]
 name = "A_Forbidden_Integer"
 path = "src/A_Forbidden_Integer.rs"
+
 
 [[bin]]
 name = "inout"
 path = "src/inout.rs"
 
+
 [[bin]]
 name = "A_Forked"
 path = "src/A_Forked.rs"
+
 
 [[bin]]
 name = "mutable"
 path = "src/mutable.rs"
 
+
 [[bin]]
 name = "string_ds"
 path = "src/string_ds.rs"
+
 
 [[bin]]
 name = "replace"
 path = "src/replace.rs"
 
+
 [[bin]]
 name = "first_pattern"
 path = "src/first_pattern.rs"
+
 
 [[bin]]
 name = "second_pattern"
 path = "src/second_pattern.rs"
 
+
 [[bin]]
 name = "Mutating_ref"
 path = "src/Mutating_ref.rs"
+
 
 [[bin]]
 name = "struct1"
 path = "src/struct1.rs"
 
+
 [[bin]]
 name = "struct2"
 path = "src/struct2.rs"
+
 
 [[bin]]
 name = "pair"
 path = "src/pair.rs"
 
+
 [[bin]]
 name = "set"
 path = "src/set.rs"
+
 
 [[bin]]
 name = "vector"
 path = "src/vector.rs"
 
+
 [[bin]]
 name = "swap"
 path = "src/swap.rs"
+
 
 [[bin]]
 name = "nest_to_const"
 path = "src/nest_to_const.rs"
 
+
 [[bin]]
 name = "second_pattern1"
 path = "src/second_pattern1.rs"
+
 
 [[bin]]
 name = "b_chemistry"
 path = "src/b_chemistry.rs"
 
+
 [[bin]]
 name = "string_operations"
 path = "src/string_operations.rs"
+
 
 [[bin]]
 name = "B_no_dividing"
 path = "src/B_no_dividing.rs"
 
+
 [[bin]]
 name = "contat_String"
 path = "src/contat_String.rs"
+
 
 [[bin]]
 name = "hash_map"
 path = "src/hash_map.rs"
 
+
 [[bin]]
 name = "frequency_check"
 path = "src/frequency_check.rs"
+
 
 [[bin]]
 name = "trait1"
 path = "src/trait1.rs"
 
+
 [[bin]]
 name = "generics"
 path = "src/generics.rs"
+
 
 [[bin]]
 name = "dangling_ref"
 path = "src/dangling_ref.rs"
 
+
 [[bin]]
 name = "lifetime"
 path = "src/lifetime.rs"
+
 
 [[bin]]
 name = "command_args"
 path = "src/command_args.rs"
 
+
 [[bin]]
 name = "anonymous"
 path = "src/anonymous.rs"
+
 
 [[bin]]
 name = "closures1"
 path = "src/closures1.rs"
 
+
 [[bin]]
 name = "box1"
 path = "src/box1.rs"
 
+
 [[bin]]
 name = "list_box2"
 path = "src/list_box2.rs"
+
+
 [[bin]]
 name = "lcs"
 path = "src/lcs.rs"
+
 
 [[bin]]
 name = "pointers"
 path = "src/pointers.rs"
 
+
 [[bin]]
 name = "sin_cos_func"
 path = "src/sin_cos_func.rs"
+
 
 [[bin]]
 name = "system_time"
 path = "src/system_time.rs"
 
+
+[[bin]]
+name = "counting_sort"
+path = "src/counting_sort.rs"
+
+
+[[bin]]
+name = "nums_sum1"
+path = "src/nums_sum1.rs"
+
+
+[[bin]]
+name = "new"
+path = "src/new.rs"

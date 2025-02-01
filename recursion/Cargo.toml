@@ -1,0 +1,17 @@
+dependencies = { }
+
+
+[package]
+name = "recursion"
+version = "0.1.0"
+edition = "2021"
+
+
+[[bin]]
+name = "tower_hanoi"
+path = "src/tower_hanoi.rs"
+
+
+[[bin]]
+name = "lines_in_plane"
+path = "src/lines_in_plane.rs"

@@ -1,0 +1,57 @@
+dependencies = { }
+
+
+[package]
+name = "sorting_problems"
+version = "0.1.0"
+edition = "2021"
+
+
+[[bin]]
+name = "a_amusing_joke"
+path = "src/a_amusing_joke.rs"
+
+
+[[bin]]
+name = "b_atillas_favorite_problem"
+path = "src/b_atillas_favorite_problem.rs"
+
+
+[[bin]]
+name = "b_barrels"
+path = "src/b_barrels.rs"
+
+
+[[bin]]
+name = "b_middle_class"
+path = "src/b_middle_class.rs"
+
+
+[[bin]]
+name = "static_range_sum_queries"
+path = "src/static_range_sum_queries.rs"
+
+
+[[bin]]
+name = "weird_algo"
+path = "src/weird_algo.rs"
+
+
+[[bin]]
+name = "missing_number"
+path = "src/missing_number.rs"
+
+
+[[bin]]
+name = "repetitions"
+path = "src/repetitions.rs"
+
+
+[[bin]]
+name = "increasing_array"
+path = "src/increasing_array.rs"
+
+
+[[bin]]
+name = "permutation"
+path = "src/permutation.rs"

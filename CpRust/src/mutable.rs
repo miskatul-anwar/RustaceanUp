@@ -7,7 +7,6 @@ fn _rin() -> String {
 }
 
 fn main() {
-    let t: i32;
+    let t: i32 = 90;
     println!("{t:?}");
 }
-

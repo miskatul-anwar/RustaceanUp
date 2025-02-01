@@ -1,0 +1,34 @@
+[package]
+name = "sorting_algo"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+rand = "0.8.4"
+text_io = "0.1.9"
+
+
+[[bin]]
+name = "bubble_sort"
+path = "src/bubble_sort.rs"
+
+
+[[bin]]
+name = "insertion_sort"
+path = "src/insertion_sort.rs"
+
+
+[[bin]]
+name = "counting_sort"
+path = "src/counting_sort.rs"
+
+
+[[bin]]
+name = "radix_sort"
+path = "src/radix_sort.rs"
+
+
+[[bin]]
+name = "selection_sort"
+path = "src/selection_sort.rs"
