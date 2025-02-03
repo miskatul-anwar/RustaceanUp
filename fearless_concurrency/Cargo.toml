@@ -20,3 +20,13 @@ path = "src/move_key.rs"
 [[bin]]
 name = "hello_channel"
 path = "src/hello_channel.rs"
+
+
+[[bin]]
+name = "shared-state-mutex"
+path = "src/shared-state-mutex.rs"
+
+
+[[bin]]
+name = "shared-memory-mutex"
+path = "src/shared-memory-mutex.rs"
