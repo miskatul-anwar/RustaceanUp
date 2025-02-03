@@ -1,0 +1,13 @@
+[dependencies]
+text_io = "0.1.12"
+
+
+[package]
+name = "cp-tricks"
+version = "0.1.0"
+edition = "2021"
+
+
+[[bin]]
+name = "kadanes-algo"
+path = "src/kadanes-algo.rs"

@@ -55,3 +55,13 @@ path = "src/increasing_array.rs"
 [[bin]]
 name = "permutation"
 path = "src/permutation.rs"
+
+
+[[bin]]
+name = "b_sorted_adj_diff"
+path = "src/b_sorted_adj_diff.rs"
+
+
+[[bin]]
+name = "two_knights"
+path = "src/two_knights.rs"
