@@ -1,0 +1,22 @@
+dependencies = { }
+
+
+[package]
+name = "codeforces"
+version = "0.1.0"
+edition = "2021"
+
+
+[[bin]]
+name = "a_milya_two_arrays"
+path = "src/a_milya_two_arrays.rs"
+
+
+[[bin]]
+name = "b_cost_of_array"
+path = "src/b_cost_of_array.rs"
+
+
+[[bin]]
+name = "c_customer"
+path = "src/c_customer.rs"

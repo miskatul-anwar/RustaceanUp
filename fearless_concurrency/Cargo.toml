@@ -1,0 +1,22 @@
+dependencies = { }
+
+
+[package]
+name = "fearless_concurrency"
+version = "0.1.0"
+edition = "2021"
+
+
+[[bin]]
+name = "hello_thread"
+path = "src/hello_thread.rs"
+
+
+[[bin]]
+name = "move_key"
+path = "src/move_key.rs"
+
+
+[[bin]]
+name = "hello_channel"
+path = "src/hello_channel.rs"
