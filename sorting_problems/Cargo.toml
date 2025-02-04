@@ -65,3 +65,13 @@ path = "src/b_sorted_adj_diff.rs"
 [[bin]]
 name = "two_knights"
 path = "src/two_knights.rs"
+
+
+[[bin]]
+name = "whats_the_median"
+path = "src/whats_the_median.rs"
+
+
+[[bin]]
+name = "vitos_family"
+path = "src/vitos_family.rs"
