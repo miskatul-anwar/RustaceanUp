@@ -5,5 +5,5 @@ fn rin_i16() -> i16 {
     input.trim().parse().unwrap()
 }
 fn main() {
-    let n = rin_i16();
+    let _n = rin_i16();
 }

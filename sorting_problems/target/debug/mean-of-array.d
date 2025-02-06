@@ -1,1 +1,1 @@
-D:\CS\RustaceanUp\sorting_problems\target\debug\mean-of-array.exe: D:\CS\RustaceanUp\sorting_problems\src\mean-of-array.rs
+/mnt/d/CS/RustaceanUp/sorting_problems/target/debug/mean-of-array: /mnt/d/CS/RustaceanUp/sorting_problems/src/mean-of-array.rs
