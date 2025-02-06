@@ -125,3 +125,13 @@ path = "src/kth-largest.rs"
 [[bin]]
 name = "smaller-than-curr"
 path = "src/smaller-than-curr.rs"
+
+
+[[bin]]
+name = "age-sort"
+path = "src/age-sort.rs"
+
+
+[[bin]]
+name = "train-swap"
+path = "src/train-swap.rs"
