@@ -75,3 +75,53 @@ path = "src/whats_the_median.rs"
 [[bin]]
 name = "vitos_family"
 path = "src/vitos_family.rs"
+
+
+[[bin]]
+name = "duplicate_elem"
+path = "src/duplicate_elem.rs"
+
+
+[[bin]]
+name = "find_the_diff"
+path = "src/find_the_diff.rs"
+
+
+[[bin]]
+name = "height-checker"
+path = "src/height-checker.rs"
+
+
+[[bin]]
+name = "intersection"
+path = "src/intersection.rs"
+
+
+[[bin]]
+name = "sort-colors"
+path = "src/sort-colors.rs"
+
+
+[[bin]]
+name = "min-abs-diff"
+path = "src/min-abs-diff.rs"
+
+
+[[bin]]
+name = "mean-of-array"
+path = "src/mean-of-array.rs"
+
+
+[[bin]]
+name = "max-product-of-three"
+path = "src/max-product-of-three.rs"
+
+
+[[bin]]
+name = "kth-largest"
+path = "src/kth-largest.rs"
+
+
+[[bin]]
+name = "smaller-than-curr"
+path = "src/smaller-than-curr.rs"
