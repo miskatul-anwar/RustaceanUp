@@ -2,9 +2,7 @@ use std::io::{self, Write};
 
 fn main() {
     // Read input strings
-    let mut a = String::new();
-    let mut b = String::new();
-    let mut c = String::new();
+    let (mut a, mut b, mut c) = (String::new(), String::new(), String::new());
 
     io::stdout().flush().unwrap();
 
