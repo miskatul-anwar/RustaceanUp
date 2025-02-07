@@ -145,19 +145,23 @@ path = "src/a_twins.rs"
 [[bin]]
 name = "a_dragons"
 path = "src/a_dragons.rs"
+
+
 [[bin]]
 name = "c_advantage"
 path = "src/c_advantage.rs"
+
 
 [[bin]]
 name = "c_create_teams"
 path = "src/c_create_teams.rs"
 
+
 [[bin]]
 name = "a_choose_two_num"
 path = "src/a_choose_two_num.rs"
 
+
 [[bin]]
 name = "b_equal_candies"
 path = "src/b_equal_candies.rs"
-
