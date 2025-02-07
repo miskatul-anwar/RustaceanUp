@@ -4,7 +4,8 @@
  *                                THANK YOU                                *
  ***************************************************************************/
 
-use std::io::{self, BufRead};
+#[allow(unused)]
+use std::io::{stdin, BufRead};
 
 #[derive(PartialEq, Eq, PartialOrd, Ord)]
 struct Pair {
@@ -13,9 +14,8 @@ struct Pair {
 }
 
 fn rin_vec_int() -> Vec<usize> {
-    let stdin = io::stdin();
     let mut input = String::new();
-    stdin.lock().read_line(&mut input).unwrap();
+    stdin().lock().read_line(&mut input).unwrap();
     input
         .trim()
         .split_whitespace()
