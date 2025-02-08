@@ -6,3 +6,6 @@ target/
 
 # Ignore all .idea directories
 .idea/
+
+# Ignore all .cph directories
+# .cph/

@@ -189,3 +189,11 @@ path = "src/a_reverse_substr.rs"
 name = "a_new_year_meet"
 path = "src/a_new_year_meet.rs"
 
+[[bin]]
+name = "a_olympiad"
+path = "src/a_olympiad.rs"
+
+[[bin]]
+name = "a_medium_number"
+path = "src/a_medium_number.rs"
+
