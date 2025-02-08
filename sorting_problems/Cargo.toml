@@ -165,3 +165,15 @@ path = "src/a_choose_two_num.rs"
 [[bin]]
 name = "b_equal_candies"
 path = "src/b_equal_candies.rs"
+[[bin]]
+name = "b_grow_the_tree"
+path = "src/b_grow_the_tree.rs"
+
+[[bin]]
+name = "helpful_math"
+path = "src/helpful_math.rs"
+
+[[bin]]
+name = "a_towers"
+path = "src/a_towers.rs"
+

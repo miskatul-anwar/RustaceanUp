@@ -4,8 +4,6 @@
  *                                THANK YOU                                *
  ***************************************************************************/
 
-#![allow(unused)]
-
 use std::io::{stdin, BufRead};
 
 fn rin_int() -> usize {
@@ -27,18 +25,24 @@ fn rin_vec_int() -> Vec<usize> {
 
 fn solve() {
     /* *************************(  Code Here  )************************* */
-    let (n, a) = (rin_int(), rin_vec_int());
+    let (_n, l, mut num, mut count, mut size) = (rin_int(), rin_vec_int(), 0, vec![0; 1002], 0);
 
-    let min = *a.iter().min().unwrap();
-    let mut amount = 0;
+    for i in l {
+        count[i] += 1;
+    }
 
-    a.iter().for_each(|i| amount += (i - min));
-    println!("{}", amount);
+    for &i in count.iter() {
+        if i != 0 {
+            num += 1
+        }
+        if size < i {
+            size = i;
+        }
+    }
+
+    println!("{} {}", size, num);
 }
 
 pub fn main() {
-    let t = rin_int();
-    for _ in 0..t {
-        solve();
-    }
+    solve()
 }

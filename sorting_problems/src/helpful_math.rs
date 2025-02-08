@@ -8,37 +8,27 @@
 
 use std::io::{stdin, BufRead};
 
-fn rin_int() -> usize {
-    let mut input = String::new();
-    stdin().lock().read_line(&mut input).unwrap();
-    return input.trim().parse().unwrap();
-}
-
 fn rin_vec_int() -> Vec<usize> {
     let mut input = String::new();
     stdin().lock().read_line(&mut input).unwrap();
-    let arr: Vec<usize> = input
+    let mut vec: Vec<usize> = input
         .trim()
-        .split_whitespace()
-        .map(|x| x.parse().unwrap())
+        .split('+')
+        .filter_map(|i| i.parse().ok())
         .collect();
-    return arr;
-}
-
-fn solve() {
-    /* *************************(  Code Here  )************************* */
-    let (n, a) = (rin_int(), rin_vec_int());
-
-    let min = *a.iter().min().unwrap();
-    let mut amount = 0;
-
-    a.iter().for_each(|i| amount += (i - min));
-    println!("{}", amount);
+    vec.sort_unstable();
+    vec
 }
 
 pub fn main() {
-    let t = rin_int();
-    for _ in 0..t {
-        solve();
+    let vec = rin_vec_int();
+    let len = vec.len();
+
+    for i in 0..len {
+        if i != len - 1 {
+            print!("{}+", vec[i])
+        } else {
+            println!("{}", vec[i])
+        }
     }
 }
