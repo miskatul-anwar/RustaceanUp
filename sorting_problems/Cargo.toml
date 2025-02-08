@@ -197,3 +197,7 @@ path = "src/a_olympiad.rs"
 name = "a_medium_number"
 path = "src/a_medium_number.rs"
 
+[[bin]]
+name = "a_remove_smallest"
+path = "src/a_remove_smallest.rs"
+

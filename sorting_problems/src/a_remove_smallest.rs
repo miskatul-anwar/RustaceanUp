@@ -6,7 +6,10 @@
 
 #![allow(unused)]
 
-use std::io::{stdin, BufRead};
+use std::{
+    collections::HashSet,
+    io::{stdin, BufRead},
+};
 
 fn rin_int() -> usize {
     let mut input = String::new();
@@ -17,19 +20,29 @@ fn rin_int() -> usize {
 fn rin_vec_int() -> Vec<usize> {
     let mut input = String::new();
     stdin().lock().read_line(&mut input).unwrap();
-    let arr: Vec<usize> = input
+    input
         .trim()
         .split_whitespace()
         .map(|x| x.parse().unwrap())
-        .collect();
-    return arr;
+        .collect()
 }
 
 fn solve() {
     /* *************************(  Code Here  )************************* */
-    let mut abc = rin_vec_int();
-    abc.sort_unstable();
-    println!("{}", abc[1]);
+    let (n, mut a, mut possible) = (rin_int(), rin_vec_int(), true);
+    a.sort_unstable();
+
+    for i in 0..n - 1 {
+        if a[i + 1] - a[i] > 1 {
+            possible = false
+        }
+    }
+
+    if possible {
+        println!("YES")
+    } else {
+        println!("NO")
+    }
 }
 
 pub fn main() {
