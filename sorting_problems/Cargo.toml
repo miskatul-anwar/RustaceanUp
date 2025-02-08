@@ -177,3 +177,7 @@ path = "src/helpful_math.rs"
 name = "a_towers"
 path = "src/a_towers.rs"
 
+[[bin]]
+name = "b_tripple"
+path = "src/b_tripple.rs"
+
