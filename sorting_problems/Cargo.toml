@@ -181,3 +181,11 @@ path = "src/a_towers.rs"
 name = "b_tripple"
 path = "src/b_tripple.rs"
 
+[[bin]]
+name = "a_reverse_substr"
+path = "src/a_reverse_substr.rs"
+
+[[bin]]
+name = "a_new_year_meet"
+path = "src/a_new_year_meet.rs"
+
