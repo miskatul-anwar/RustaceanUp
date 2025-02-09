@@ -1,14 +1,13 @@
 use std::collections::BinaryHeap;
 
-pub fn find_kth_largest(nums: Vec<i32>, k: i32) -> i32 {
+pub fn find_kth_largest(nums: Vec<i32>, mut k: i32) -> i32 {
     let mut h_num: BinaryHeap<i32> = nums.into_iter().collect();
-    let mut i = k;
 
     while let Some(top) = h_num.pop() {
-        if i == 1 {
+        if k == 1 {
             return top;
         }
-        i -= 1;
+        k -= 1;
     }
     1
 }

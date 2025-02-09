@@ -201,3 +201,7 @@ path = "src/a_medium_number.rs"
 name = "a_remove_smallest"
 path = "src/a_remove_smallest.rs"
 
+[[bin]]
+name = "b_basketball_together"
+path = "src/b_basketball_together.rs"
+
