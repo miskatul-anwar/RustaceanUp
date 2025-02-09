@@ -20,3 +20,16 @@ path = "src/b_cost_of_array.rs"
 [[bin]]
 name = "c_customer"
 path = "src/c_customer.rs"
+[[bin]]
+name = "skibidus"
+path = "src/skibidus.rs"
+
+[[bin]]
+name = "skibidus_ohio"
+path = "src/skibidus_ohio.rs"
+
+[[bin]]
+name = "a_string"
+path = "src/a_string.rs"
+
+

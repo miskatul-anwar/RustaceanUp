@@ -6,10 +6,7 @@
 
 #![allow(unused)]
 
-use std::{
-    collections::VecDeque,
-    io::{stdin, BufRead},
-};
+use std::io::{stdin, BufRead};
 
 fn rin_vec_int() -> Vec<usize> {
     let mut input = String::new();
@@ -21,6 +18,7 @@ fn rin_vec_int() -> Vec<usize> {
         .collect()
 }
 
+/* ==================code below! */
 fn main() {
     let (n_d, mut p) = (rin_vec_int(), rin_vec_int());
     let (n, d) = (n_d[0], n_d[1]);
