@@ -1,61 +1,148 @@
-/***************************************************************************
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
  * THIS TEMPLATE IS MADE BY MISKATUL ANWAR<miskatul.anwar.csecu@gmail.com> *
  *               GITHUB : https://github.com/miskatul-anwar                *
  *                                THANK YOU                                *
- ***************************************************************************/
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 #![allow(unused)]
 
 use std::io::{stdin, BufRead};
 
-fn rin_int() -> usize {
-    let mut input = String::new();
-    stdin().lock().read_line(&mut input).unwrap();
-    return input.trim().parse().unwrap();
+macro_rules! read_line {
+    () => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input
+    }};
 }
 
-fn rin_vec_int() -> Vec<usize> {
-    let mut input = String::new();
-    stdin().lock().read_line(&mut input).unwrap();
-    let arr: Vec<usize> = input
-        .trim()
-        .split_whitespace()
-        .map(|x| x.parse().unwrap())
-        .collect();
-    return arr;
+macro_rules! rin {
+    ($t:ty) => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input.trim().parse::<$t>().unwrap()
+    }};
 }
 
-fn rin_vec_char() -> Vec<char> {
-    let mut input = String::new();
-    stdin().lock().read_line(&mut input).unwrap();
-    let vec: Vec<char> = input.trim().chars().collect();
-    return vec;
+macro_rules! rin_vec {
+    ($t:ty) => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input
+            .trim()
+            .split_whitespace()
+            .map(|x| x.parse::<$t>().unwrap())
+            .collect::<Vec<$t>>()
+    }};
 }
 
-fn to_string(vec: Vec<char>) -> String {
-    return vec.iter().collect::<String>();
+macro_rules! rin_vec_char {
+    () => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input.trim().chars().collect::<Vec<char>>()
+    }};
 }
 
+macro_rules! xor_swap {
+    ($x:expr, $y:expr) => {
+        if $x != $y {
+            $x ^= $y;
+            $y ^= $x;
+            $x ^= $y;
+        }
+    };
+}
+
+macro_rules! prefix_sum {
+    ($vec:expr) => {
+        $vec.iter()
+            .scan(0, |sum, &x| {
+                *sum += x;
+                Some(*sum)
+            })
+            .collect::<Vec<i32>>()
+    };
+}
+
+macro_rules! max {
+    ($vec:expr) => {
+        *$vec.iter().max().unwrap()
+    };
+}
+
+macro_rules! min {
+    (vec:expr) => {
+        *vec.iter().min().unwrap()
+    };
+}
+
+macro_rules! sort_des {
+    ($vec:expr) => {
+        $vec.sort_unstable_by(|a, b| b.cmp(a));
+    };
+}
+
+macro_rules! vec_to_string {
+    ($vec:expr) => {
+        $vec.iter().collect::<String>()
+    };
+}
+
+macro_rules! string_to_vec {
+    ($string:expr) => {
+        $string.chars().collect::<Vec<char>>()
+    };
+}
+
+macro_rules! stot {
+    ($type:ty, $value:expr) => {
+        $value.parse::<$type>().expect("Conversion failed")
+    };
+}
+
+macro_rules! rout_vec {
+    ($vec:expr) => {{
+        for i in $vec {
+            print!("{} ", i)
+        }
+        println!()
+    }};
+}
+
+macro_rules! rout {
+    ($x:expr) => {
+        print!("{} ", $x)
+    };
+}
+
+macro_rules! routln {
+    ($x:expr) => {
+        println!("{}", $x)
+    };
+}
+
+/*~~~~~~~~~~~~~*
+ * CODE BELOW: *
+ *~~~~~~~~~~~~~*/
 fn solve() {
-    /* *************************(  Code Here  )************************* */
-    let n = rin_int();
-    let mut a = rin_vec_int();
-    a.sort_unstable();
+    let (n, mut a) = (rin!(usize), rin_vec!(i32));
 
+    a.sort_unstable();
     if n % 2 != 0 {
-        print!("{} ", a[n / 2]);
+        rout!(a[n / 2])
     }
 
     for i in (0..n / 2).rev() {
+        // karon pasha pashi & majh theke uvoypashe gele diff bare
         print!("{} {} ", a[n - i - 1], a[i]);
     }
 
-    println!();
+    println!()
 }
-
-pub fn main() {
-    let t = rin_int();
-    for _ in 0..t {
-        solve();
+fn main() {
+    let t = rin!(usize);
+    for _ in 1..=t {
+        solve()
     }
 }

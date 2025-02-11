@@ -1,32 +1,137 @@
-use std::io::{self, Write};
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+ * THIS TEMPLATE IS MADE BY MISKATUL ANWAR<miskatul.anwar.csecu@gmail.com> *
+ *               GITHUB : https://github.com/miskatul-anwar                *
+ *                                THANK YOU                                *
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-fn main() {
-    // Read input strings
-    let (mut a, mut b, mut c) = (String::new(), String::new(), String::new());
+#![allow(unused)]
 
-    io::stdout().flush().unwrap();
+use std::io::{stdin, BufRead};
 
-    // Read input
-    io::stdin().read_line(&mut a).unwrap();
-    io::stdin().read_line(&mut b).unwrap();
-    io::stdin().read_line(&mut c).unwrap();
+macro_rules! read_line {
+    () => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input
+    }};
+}
 
-    // Trim to remove newlines
-    let a = a.trim();
-    let b = b.trim();
-    let c = c.trim();
+macro_rules! rin {
+    ($t:ty) => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input.trim().parse::<$t>().unwrap()
+    }};
+}
 
-    // Concatenate and sort
-    let mut s: Vec<char> = (a.to_string() + b).chars().collect();
-    let mut c_chars: Vec<char> = c.chars().collect();
+macro_rules! rin_vec {
+    ($t:ty) => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input
+            .trim()
+            .split_whitespace()
+            .map(|x| x.parse::<$t>().unwrap())
+            .collect::<Vec<$t>>()
+    }};
+}
 
-    s.sort_by(|x, y| x.cmp(y));
-    c_chars.sort_by(|x, y| x.cmp(y));
+macro_rules! rin_vec_char {
+    () => {{
+        let mut input = String::new();
+        stdin().lock().read_line(&mut input).unwrap();
+        input.trim().chars().collect::<Vec<char>>()
+    }};
+}
 
-    // Check for equality and print result
-    if s == c_chars {
-        println!("YES");
+macro_rules! xor_swap {
+    ($x:expr, $y:expr) => {
+        if $x != $y {
+            $x ^= $y;
+            $y ^= $x;
+            $x ^= $y;
+        }
+    };
+}
+
+macro_rules! prefix_sum {
+    ($vec:expr) => {
+        $vec.iter()
+            .scan(0, |sum, &x| {
+                *sum += x;
+                Some(*sum)
+            })
+            .collect::<Vec<i32>>()
+    };
+}
+
+macro_rules! max {
+    ($vec:expr) => {
+        *$vec.iter().max().unwrap()
+    };
+}
+
+macro_rules! sort_des {
+    ($vec:expr) => {
+        $vec.sort_unstable_by(|a, b| b.cmp(a));
+    };
+}
+
+macro_rules! rout_vec {
+    ($vec:expr) => {{
+        for i in $vec {
+            print!("{} ", i)
+        }
+        println!()
+    }};
+}
+
+macro_rules! rout {
+    ($x:expr) => {
+        print!("{} ", $x)
+    };
+}
+
+macro_rules! routln {
+    ($x:expr) => {
+        println!("{}", $x)
+    };
+}
+
+macro_rules! vec_to_string {
+    ($vec:expr) => {
+        $vec.iter().collect::<String>()
+    };
+}
+
+macro_rules! string_to_vec {
+    ($string:expr) => {
+        $string.chars().collect::<Vec<char>>()
+    };
+}
+
+macro_rules! stot {
+    ($type:ty, $value:expr) => {
+        $value.parse::<$type>().expect("Conversion failed")
+    };
+}
+
+/*~~~~~~~~~~~~~*
+ * CODE BELOW: *
+ *~~~~~~~~~~~~~*/
+fn solve() {
+    let (a, b, mut c) = (rin!(String), rin!(String), rin_vec_char!());
+    let mut s: Vec<char> = (a + b.as_str()).chars().collect();
+
+    sort_des!(&mut s);
+    sort_des!(&mut c);
+
+    if s == c {
+        println!("YES")
     } else {
-        println!("NO");
+        println!("NO")
     }
+}
+fn main() {
+    solve()
 }

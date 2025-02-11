@@ -205,3 +205,7 @@ path = "src/a_remove_smallest.rs"
 name = "b_basketball_together"
 path = "src/b_basketball_together.rs"
 
+[[bin]]
+name = "a_make_equal_to_b"
+path = "src/a_make_equal_to_b.rs"
+
