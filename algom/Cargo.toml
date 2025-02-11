@@ -1,9 +1,9 @@
 [package]
 name = "algom"
 version = "0.1.0"
-authors = ["miskatul-anwar"]
+authors = ["Miskatul Anwar, miskatul.anwar.csecu@gmail.com"]
 edition = "2021"
-
+license = "MIT OR Apache-2.0"
 [dependencies]
 
 [profile.dev]

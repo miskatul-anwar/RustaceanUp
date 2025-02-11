@@ -28,7 +28,7 @@ fn main() {
     let (mut player, mut i, mut wins) = (0, 0, 0);
 
     while i < n && player <= n {
-        let x = ((d + 1) as f64 / (p[i] as f64 * 1.0)).ceil();
+        let x = ((d + 1) as f64 / (p[i] as f64)).ceil();
         player += x as usize;
 
         if player <= n {
