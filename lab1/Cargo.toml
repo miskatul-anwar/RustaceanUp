@@ -1,0 +1,18 @@
+[package]
+name = "lab1"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+[[bin]]
+name = "a_quicksort"
+path = "src/a_quicksort.rs"
+
+[[bin]]
+name = "insertion"
+path = "src/insertion.rs"
+
+[[bin]]
+name = "hello"
+path = "src/hello.rs"
+

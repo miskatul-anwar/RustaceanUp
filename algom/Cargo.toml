@@ -11,3 +11,8 @@ opt-level = 0
 
 [profile.release]
 opt-level = 3
+
+[[bin]]
+name = "a_quicksort"
+path = "src/a_quicksort.rs"
+
