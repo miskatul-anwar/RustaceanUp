@@ -1,0 +1,14 @@
+[package]
+name = "dynamic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+[[bin]]
+name = "2d_grid"
+path = "src/2d_grid.rs"
+
+[[bin]]
+name = "2d-grid-comb"
+path = "src/2d-grid-comb.rs"
+

@@ -60,3 +60,11 @@ path = "src/a_grasshopper_on_a_line.rs"
 [[bin]]
 name = "a_kapreker_constant"
 path = "src/a_kapreker_constant.rs"
+[[bin]]
+name = "a_make_it_beautiful"
+path = "src/a_make_it_beautiful.rs"
+
+[[bin]]
+name = "a_one_and_two"
+path = "src/a_one_and_two.rs"
+

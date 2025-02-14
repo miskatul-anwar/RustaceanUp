@@ -1,0 +1,1 @@
+{"name":"Local: a_one_and_two","url":"/mnt/d/CS/RustaceanUp/codeforces/src/a_one_and_two.rs","tests":[{"id":1739513908094,"input":"3\n6\n2 2 1 2 1 2\n3\n1 2 1\n4\n1 1 1 1\n","output":"2\n-1\n1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/CS/RustaceanUp/codeforces/src/a_one_and_two.rs","group":"local","local":true}
