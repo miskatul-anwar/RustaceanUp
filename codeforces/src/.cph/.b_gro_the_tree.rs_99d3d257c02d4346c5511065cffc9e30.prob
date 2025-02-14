@@ -1,0 +1,1 @@
+{"name":"Local: b_gro_the_tree","url":"/mnt/d/CS/RustaceanUp/codeforces/src/b_gro_the_tree.rs","tests":[{"id":1739460169496,"input":"3\n1 2 3\n","output":"26"},{"id":1739460394823,"input":"4\n1 1 2 2\n","output":"20"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/CS/RustaceanUp/codeforces/src/b_gro_the_tree.rs","group":"local","local":true}
