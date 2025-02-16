@@ -12,3 +12,11 @@ path = "src/2d_grid.rs"
 name = "2d-grid-comb"
 path = "src/2d-grid-comb.rs"
 
+[[bin]]
+name = "2d-grid-iter"
+path = "src/2d-grid-iter.rs"
+
+[[bin]]
+name = "some_variant"
+path = "src/some_variant.rs"
+

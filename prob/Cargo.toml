@@ -209,3 +209,7 @@ path = "src/b_basketball_together.rs"
 name = "a_make_equal_to_b"
 path = "src/a_make_equal_to_b.rs"
 
+[[bin]]
+name = "rem_adj_duplicate"
+path = "src/rem_adj_duplicate.rs"
+

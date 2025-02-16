@@ -37,3 +37,27 @@ path = "src/Valid_parentheses.rs"
 name = "7-11-counting_sort"
 path = "src/7-11-counting_sort.rs"
 
+[[bin]]
+name = "stack1"
+path = "src/stack1.rs"
+
+[[bin]]
+name = "palindrome_st_qu"
+path = "src/palindrome_st_qu.rs"
+
+[[bin]]
+name = "palindrome_check_deq"
+path = "src/palindrome_check_deq.rs"
+
+[[bin]]
+name = "linked_list"
+path = "src/linked_list.rs"
+
+[[bin]]
+name = "linkedlist_stack"
+path = "src/linkedlist_stack.rs"
+
+[[bin]]
+name = "reverse_polish"
+path = "src/reverse_polish.rs"
+

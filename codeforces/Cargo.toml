@@ -68,3 +68,7 @@ path = "src/a_make_it_beautiful.rs"
 name = "a_one_and_two"
 path = "src/a_one_and_two.rs"
 
+[[bin]]
+name = "a_walking_master"
+path = "src/a_walking_master.rs"
+
