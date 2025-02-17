@@ -30,4 +30,5 @@ fn main() {
     b.sort_unstable_by(|a, b| b.cmp(a));
 
     print!("{} {}", a[0], b[0])
+
 }

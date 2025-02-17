@@ -213,3 +213,31 @@ path = "src/a_make_equal_to_b.rs"
 name = "rem_adj_duplicate"
 path = "src/rem_adj_duplicate.rs"
 
+[[bin]]
+name = "a_brogramming_contest"
+path = "src/a_brogramming_contest.rs"
+
+[[bin]]
+name = "b_variety_discour"
+path = "src/b_variety_discour.rs"
+
+[[bin]]
+name = "extremely_round"
+path = "src/extremely_round.rs"
+
+[[bin]]
+name = "we_need_zero"
+path = "src/we_need_zero.rs"
+
+[[bin]]
+name = "a_unit_array"
+path = "src/a_unit_array.rs"
+
+[[bin]]
+name = "a_walking_master"
+path = "src/a_walking_master.rs"
+
+[[bin]]
+name = "c_prepend_append"
+path = "src/c_prepend_append.rs"
+
