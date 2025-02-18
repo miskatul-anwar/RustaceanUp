@@ -1,8 +1,5 @@
 #![allow(unused)]
-use std::{
-    collections::VecDeque,
-    io::{stdin, stdout, BufWriter, Write},
-};
+use std::io::{stdin, stdout, BufWriter, Write};
 
 #[derive(Default)]
 struct Scanner {
@@ -30,24 +27,28 @@ fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let mut q: VecDeque<i32> = VecDeque::new();
     let t = sc.next();
     for _ in 1..=t {
-        let mut x: i32 = sc.next();
+        let n = sc.next::<usize>() - 2;
+        let b: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+        let mut possible = true;
 
-        if x == 1 {
-            x = sc.next();
-            q.push_back(x);
-        } else if x == 2 {
-            if !q.is_empty() {
-                q.pop_front();
+        if n <= 2 {
+            writeln!(out, "YES").ok();
+            continue;
+        }
+
+        for i in 0..n - 2 {
+            if b[i] == 1 && b[i + 1] == 0 && b[i + 2] == 1 {
+                possible = false;
+                break;
             }
+        }
+
+        if possible {
+            writeln!(out, "YES").ok();
         } else {
-            if let Some(front) = q.front() {
-                writeln!(out, "{}", front).ok();
-            } else {
-                writeln!(out, "Empty!").ok();
-            }
+            writeln!(out, "NO").ok();
         }
     }
 }

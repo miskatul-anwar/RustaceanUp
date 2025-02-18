@@ -1,8 +1,5 @@
 #![allow(unused)]
-use std::{
-    collections::VecDeque,
-    io::{stdin, stdout, BufWriter, Write},
-};
+use std::io::{stdin, stdout, BufWriter, Write};
 
 #[derive(Default)]
 struct Scanner {
@@ -30,24 +27,17 @@ fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let mut q: VecDeque<i32> = VecDeque::new();
-    let t = sc.next();
-    for _ in 1..=t {
-        let mut x: i32 = sc.next();
+    let n = sc.next();
+    let heights: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+    let max = *heights.iter().max().unwrap();
 
-        if x == 1 {
-            x = sc.next();
-            q.push_back(x);
-        } else if x == 2 {
-            if !q.is_empty() {
-                q.pop_front();
-            }
+    for i in heights {
+        if i != max {
+            write!(out, "{} ", max).ok();
         } else {
-            if let Some(front) = q.front() {
-                writeln!(out, "{}", front).ok();
-            } else {
-                writeln!(out, "Empty!").ok();
-            }
+            write!(out, "-1 ").ok();
         }
     }
+
+    writeln!(out, "").ok();
 }

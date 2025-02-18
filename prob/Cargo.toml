@@ -253,3 +253,23 @@ path = "src/reverse_queue.rs"
 name = "easy_queue"
 path = "src/easy_queue.rs"
 
+[[bin]]
+name = "mountain_peak"
+path = "src/mountain_peak.rs"
+
+[[bin]]
+name = "implement_queue_stack"
+path = "src/implement_queue_stack.rs"
+
+[[bin]]
+name = "a_wasthere_array"
+path = "src/a_wasthere_array.rs"
+
+[[bin]]
+name = "b_set_of_strangers"
+path = "src/b_set_of_strangers.rs"
+
+[[bin]]
+name = "a_palindromes_replace"
+path = "src/a_palindromes_replace.rs"
+

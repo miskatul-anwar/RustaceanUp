@@ -1,0 +1,1 @@
+{"name":"Local: a_wasthere_array","url":"/mnt/d/CS/RustaceanUp/prob/src/a_wasthere_array.rs","tests":[{"id":1739870954369,"input":"3\n10\n0 1 0 0 0 0 1 1\n3\n1\n10\n0 1 0 1 1 0 0 1\n","output":"YES\nYES\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/d/CS/RustaceanUp/prob/src/a_wasthere_array.rs","group":"local","local":true}
