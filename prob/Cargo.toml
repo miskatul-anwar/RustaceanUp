@@ -241,3 +241,15 @@ path = "src/a_walking_master.rs"
 name = "c_prepend_append"
 path = "src/c_prepend_append.rs"
 
+[[bin]]
+name = "r_palindrome_array"
+path = "src/r_palindrome_array.rs"
+
+[[bin]]
+name = "reverse_queue"
+path = "src/reverse_queue.rs"
+
+[[bin]]
+name = "easy_queue"
+path = "src/easy_queue.rs"
+
