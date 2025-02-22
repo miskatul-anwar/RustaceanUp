@@ -23,34 +23,18 @@ impl Scanner {
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
 
-fn algo(n: i64, steps: &mut Vec<i64>) {
+fn print(n: i32) {
     match n {
-        1 => return,
+        1 => println!("{n}"),
         _ => {
-            if n % 2 == 0 {
-                steps.push(n / 2);
-                algo(n / 2, steps);
-            } else {
-                steps.push(n * 3 + 1);
-                algo(n * 3 + 1, steps);
-            }
+            print!("{n} ");
+            print(n - 1);
         }
     }
 }
-
 fn main() {
     let mut sc = Scanner::default();
-    let out = &mut BufWriter::new(stdout());
 
-    let n = sc.next::<i64>();
-    let mut steps: Vec<i64> = Vec::new();
-    steps.push(n);
-
-    algo(n, &mut steps);
-
-    for i in steps {
-        write!(out, "{i} ").unwrap()
-    }
-
-    writeln!(out, "").unwrap()
+    let n = sc.next();
+    print(n);
 }

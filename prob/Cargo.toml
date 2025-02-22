@@ -322,3 +322,9 @@ path="src/subsets.rs"
 [[bin]]
 name="m_palindromes"
 path="src/m_palindromes.rs"
+[[bin]]
+name="b_print_one_n"
+path="src/b_print_one_n.rs"
+[[bin]]
+name="c_n_to_1"
+path="src/c_n_to_1.rs"

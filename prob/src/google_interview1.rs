@@ -38,6 +38,32 @@ fn main() {
         }
     }
 
+    let mut area = 0;
 
+    for i in 0..n {
+        for j in 0..m {
+            if land[i][j] == 1 {
+                let mut v_len = 0;
+                let mut h_len = 0;
 
+                for k in j..m {
+                    match land[i][k] {
+                        1 => v_len += 1,
+                        _ => break,
+                    }
+                }
+
+                for k in i..n {
+                    match land[k][j] {
+                        1 => h_len += 1,
+                        _ => break,
+                    }
+                }
+
+                area = area.max((v_len.min(h_len) as u32).pow(2))
+            }
+        }
+    }
+
+    writeln!(out, "{area}").unwrap()
 }
