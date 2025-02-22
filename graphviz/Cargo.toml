@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 graphviz-rust = "0.9.3"
+petgraph = "0.7.1"
