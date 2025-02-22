@@ -27,36 +27,28 @@ fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let mut s: Vec<char> = sc.next::<String>().chars().into_iter().collect();
-    let n = s.len();
+    let t = sc.next();
+    for _ in 1..=t {
+        let x = sc.next::<i64>();
+        let n = sc.next::<i64>();
 
-    if n % 2 != 0 && s[n / 2] == '?' {
-        s[n / 2] = 'x';
-    }
+        let mut res = x;
+        let mut s;
 
-    let (mut i, mut j) = (0, n - 1);
-
-    while i < j {
-        if s[i] == '?' && s[j] != '?' {
-            s[i] = s[j];
-        // } else if s[i] == '?' && s[j] == '?' {
-        //     s[i] = 'x';
-        //     s[j] = 'x';
-        } else if s[i] != '?' && s[j] == '?' {
-            s[j] = s[i];
+        if x % 2 != 0 {
+            s = 1
+        } else {
+            s = -1
         }
-        i += 1;
-        j -= 1;
-    }
 
-     let palindrome = (0..n / 2).all(|i| s[i] == s[n - 1 - i]);
-
-    if palindrome {
-        for i in s {
-            write!(out, "{}", i).ok();
+        if n % 4 == 1 {
+            res += s * n
+        } else if n % 4 == 2 {
+            res -= s
+        } else if n % 4 == 3 {
+            res -= s * (n + 1)
         }
-        writeln!(out, "").ok();
-    } else {
-        writeln!(out, "-1").ok();
+
+        writeln!(out, "{}", res);
     }
 }

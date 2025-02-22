@@ -61,3 +61,6 @@ path = "src/linkedlist_stack.rs"
 name = "reverse_polish"
 path = "src/reverse_polish.rs"
 
+[[bin]]
+name="testing"
+path="src/testing.rs"

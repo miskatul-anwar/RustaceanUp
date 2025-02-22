@@ -37,6 +37,7 @@ fn solve() {
 
 pub fn main() {
     let t = rin_int();
+    
     for _ in 0..t {
         solve();
     }

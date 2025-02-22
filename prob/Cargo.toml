@@ -1,4 +1,4 @@
-dependencies = { }
+dependencies = {}
 
 
 [package]
@@ -273,3 +273,52 @@ path = "src/b_set_of_strangers.rs"
 name = "a_palindromes_replace"
 path = "src/a_palindromes_replace.rs"
 
+[[bin]]
+name = "serval_and_mocha"
+path = "src/serval_and_mocha.rs"
+
+[[bin]]
+name = "a_everyone_likes_good_arrays"
+path = "src/a_everyone_likes_good_arrays.rs"
+
+[[bin]]
+name = "b_odd_grasshopper"
+path = "src/b_odd_grasshopper.rs"
+
+[[bin]]
+name = "testing"
+path = "src/testing.rs"
+
+[[bin]]
+name = "forked"
+path = "src/forked.rs"
+[[bin]]
+name="wierd-algorithm-recurse"
+path="src/wierd-algorithm-recurse.rs"
+[[bin]]
+name="flight_discount"
+path="src/flight_discount.rs"
+[[bin]]
+name="c_visile_in_kakak"
+path="src/c_visile_in_kakak.rs"
+[[bin]]
+name="tail_recursion"
+path="src/tail_recursion.rs"
+[[bin]]
+name="google_interview1"
+path="src/google_interview1.rs"
+[[bin]]
+name="a_jellyfish_and_undertale"
+path="src/a_jellyfish_and_undertale.rs"
+[[bin]]
+name="a_print_recursion"
+path="src/a_print_recursion.rs"
+[[bin]]
+name="f_print_even_indices"
+path="src/f_print_even_indices.rs"
+[[bin]]
+name="subsets"
+path="src/subsets.rs"
+[[bin]]
+name="m_palindromes"
+path="src/m_palindromes.rs"

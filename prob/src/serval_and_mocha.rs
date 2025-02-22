@@ -19,6 +19,17 @@ impl Scanner {
     }
 }
 
+macro_rules! gcd {
+    ($a:expr, $b:expr) => {{
+        let (mut a, mut b) = ($a, $b);
+        while b != 0 {
+            let temp = b;
+            b = a % b;
+            a = temp;
+        }
+        a
+    }};
+}
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
@@ -27,36 +38,25 @@ fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let mut s: Vec<char> = sc.next::<String>().chars().into_iter().collect();
-    let n = s.len();
+    let t = sc.next();
+    for _ in 1..=t {
+        let n = sc.next::<usize>();
+        let v: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+        let mut beautiful = false;
 
-    if n % 2 != 0 && s[n / 2] == '?' {
-        s[n / 2] = 'x';
-    }
-
-    let (mut i, mut j) = (0, n - 1);
-
-    while i < j {
-        if s[i] == '?' && s[j] != '?' {
-            s[i] = s[j];
-        // } else if s[i] == '?' && s[j] == '?' {
-        //     s[i] = 'x';
-        //     s[j] = 'x';
-        } else if s[i] != '?' && s[j] == '?' {
-            s[j] = s[i];
+        for i in 0..n {
+            for j in i + 1..n {
+                if gcd!(v[i], v[j]) <= 2 {
+                    beautiful = true;
+                    break;
+                }
+            }
         }
-        i += 1;
-        j -= 1;
-    }
 
-     let palindrome = (0..n / 2).all(|i| s[i] == s[n - 1 - i]);
-
-    if palindrome {
-        for i in s {
-            write!(out, "{}", i).ok();
+        if beautiful {
+            writeln!(out, "YES").ok();
+        } else {
+            writeln!(out, "NO").ok();
         }
-        writeln!(out, "").ok();
-    } else {
-        writeln!(out, "-1").ok();
     }
 }
