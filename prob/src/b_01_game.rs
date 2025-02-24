@@ -23,21 +23,31 @@ impl Scanner {
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
 
-fn print(n: i32) {
-    match n {
-        1 => println!("{n}"),
-        _ => {
-            print!("{n} ");
-            print(n - 1);
-        }
-    }
-}
 fn main() {
     let mut sc = Scanner::default();
+    let out = &mut BufWriter::new(stdout());
 
     let t = sc.next();
     for _ in 1..=t {
-        let n = sc.next();
+        let s = sc.next::<String>();
+
+        let mut ones = 0;
+        let mut zeros = 0;
+
+        for i in s.chars() {
+            if i == '1' {
+                ones += 1
+            } else {
+                zeros += 1
+            }
+        }
+
+        let ans = ones.min(zeros);
+
+        if ans % 2 != 0 {
+            writeln!(out, "DA").unwrap()
+        } else {
+            writeln!(out, "NET").unwrap()
+        }
     }
-    print(n);
 }

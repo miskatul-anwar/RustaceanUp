@@ -293,38 +293,56 @@ path = "src/testing.rs"
 name = "forked"
 path = "src/forked.rs"
 [[bin]]
-name="wierd-algorithm-recurse"
-path="src/wierd-algorithm-recurse.rs"
+name = "wierd-algorithm-recurse"
+path = "src/wierd-algorithm-recurse.rs"
 [[bin]]
-name="flight_discount"
-path="src/flight_discount.rs"
+name = "flight_discount"
+path = "src/flight_discount.rs"
 [[bin]]
-name="c_visile_in_kakak"
-path="src/c_visile_in_kakak.rs"
+name = "c_visile_in_kakak"
+path = "src/c_visile_in_kakak.rs"
 [[bin]]
-name="tail_recursion"
-path="src/tail_recursion.rs"
+name = "tail_recursion"
+path = "src/tail_recursion.rs"
 [[bin]]
-name="google_interview1"
-path="src/google_interview1.rs"
+name = "google_interview1"
+path = "src/google_interview1.rs"
 [[bin]]
-name="a_jellyfish_and_undertale"
-path="src/a_jellyfish_and_undertale.rs"
+name = "a_jellyfish_and_undertale"
+path = "src/a_jellyfish_and_undertale.rs"
 [[bin]]
-name="a_print_recursion"
-path="src/a_print_recursion.rs"
+name = "a_print_recursion"
+path = "src/a_print_recursion.rs"
 [[bin]]
-name="f_print_even_indices"
-path="src/f_print_even_indices.rs"
+name = "f_print_even_indices"
+path = "src/f_print_even_indices.rs"
 [[bin]]
-name="subsets"
-path="src/subsets.rs"
+name = "subsets"
+path = "src/subsets.rs"
 [[bin]]
-name="m_palindromes"
-path="src/m_palindromes.rs"
+name = "m_palindromes"
+path = "src/m_palindromes.rs"
 [[bin]]
-name="b_print_one_n"
-path="src/b_print_one_n.rs"
+name = "b_print_one_n"
+path = "src/b_print_one_n.rs"
 [[bin]]
-name="c_n_to_1"
-path="src/c_n_to_1.rs"
+name = "c_n_to_1"
+path = "src/c_n_to_1.rs"
+[[bin]]
+name = "print_using_rec"
+path = "src/print_using_rec.rs"
+[[bin]]
+name = "backspace_compare"
+path = "src/backspace_compare.rs"
+[[bin]]
+name = "reverse_using_stack"
+path = "src/reverse_using_stack.rs"
+[[bin]]
+name = "remove_duplicate_stack"
+path = "src/remove_duplicate_stack.rs"
+[[bin]]
+name = "get_middle_linked_list"
+path = "src/get_middle_linked_list.rs"
+[[bin]]
+name="b_01_game"
+path="src/b_01_game.rs"

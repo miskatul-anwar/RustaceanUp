@@ -1,5 +1,8 @@
 #![allow(unused)]
-use std::io::{stdin, stdout, BufWriter, Write};
+use std::{
+    collections::LinkedList,
+    io::{stdin, stdout, BufWriter, Write},
+};
 
 #[derive(Default)]
 struct Scanner {
@@ -23,21 +26,21 @@ impl Scanner {
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
 
-fn print(n: i32) {
-    match n {
-        1 => println!("{n}"),
-        _ => {
-            print!("{n} ");
-            print(n - 1);
-        }
-    }
-}
 fn main() {
     let mut sc = Scanner::default();
+    let out = &mut BufWriter::new(stdout());
 
-    let t = sc.next();
-    for _ in 1..=t {
-        let n = sc.next();
+    let size = sc.next();
+    let nums: LinkedList<_> = (0..size).map(|_| sc.next::<i32>()).collect();
+    //FIXME
+
+    let mut n = 0;
+    for &num in nums.iter() {
+        if n >= nums.len() / 2 {
+            write!(out, "{num} ").unwrap()
+        }
+        n += 1
     }
-    print(n);
+
+    writeln!(out, "").unwrap()
 }

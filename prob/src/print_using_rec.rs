@@ -22,13 +22,12 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
-
-fn print(n: i32) {
+fn print(n: i64) {
     match n {
-        1 => println!("{n}"),
+        0 => return,
         _ => {
-            print!("{n} ");
-            print(n - 1);
+            print(n / 10);
+            print!("{} ", n % 10);
         }
     }
 }
@@ -38,6 +37,7 @@ fn main() {
     let t = sc.next();
     for _ in 1..=t {
         let n = sc.next();
+        print(n);
+        println!()
     }
-    print(n);
 }

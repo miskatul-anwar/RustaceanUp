@@ -23,21 +23,22 @@ impl Scanner {
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
 
-fn print(n: i32) {
-    match n {
-        1 => println!("{n}"),
-        _ => {
-            print!("{n} ");
-            print(n - 1);
-        }
+fn reverse(mut s: String) -> String {
+    let mut stack: Vec<char> = s.chars().into_iter().collect();
+    s.clear();
+
+    while let Some(top) = stack.pop() {
+        s.push(top);
     }
+
+    s
 }
+
 fn main() {
     let mut sc = Scanner::default();
+    let out = &mut BufWriter::new(stdout());
 
-    let t = sc.next();
-    for _ in 1..=t {
-        let n = sc.next();
-    }
-    print(n);
+    let s = sc.next::<String>();
+
+    writeln!(out, "{}", reverse(s)).unwrap()
 }

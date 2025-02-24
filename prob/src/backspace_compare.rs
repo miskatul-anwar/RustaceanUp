@@ -22,22 +22,34 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
+fn backspace_compare(mut s: String, mut t: String) -> bool {
+    fn process(input: String) -> String {
+        let mut stack = Vec::new();
 
-fn print(n: i32) {
-    match n {
-        1 => println!("{n}"),
-        _ => {
-            print!("{n} ");
-            print(n - 1);
+        for c in input.chars() {
+            if c == '#' {
+                stack.pop();
+            } else {
+                stack.push(c);
+            }
         }
+
+        stack.into_iter().collect()
     }
+
+    process(s) == process(t)
 }
+
 fn main() {
     let mut sc = Scanner::default();
+    let out = &mut BufWriter::new(stdout());
 
-    let t = sc.next();
-    for _ in 1..=t {
-        let n = sc.next();
+    let s = sc.next::<String>();
+    let t = sc.next::<String>();
+
+    if backspace_compare(s, t) {
+        writeln!(out, "YES").unwrap()
+    } else {
+        writeln!(out, "NO").unwrap()
     }
-    print(n);
 }
