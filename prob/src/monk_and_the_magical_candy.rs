@@ -1,5 +1,8 @@
 #![allow(unused)]
-use std::io::{stdin, stdout, BufWriter, Write};
+use std::{
+    collections::{BTreeMap, BTreeSet},
+    io::{stdin, stdout, BufWriter, Write},
+};
 
 #[derive(Default)]
 struct Scanner {
@@ -29,25 +32,19 @@ fn main() {
 
     let t = sc.next();
     for _ in 1..=t {
-        let s = sc.next::<String>();
+        let n = sc.next::<usize>();
+        let mut k = sc.next::<i32>();
+        let mut candies: Vec<i32> = (0..n).map(|_| sc.next()).collect();
 
-        let mut ones = 0i32;
-        let mut zeros = 0i32;
+        let mut consumed = 0;
 
-        for i in s.chars() {
-            if i == '1' {
-                ones += 1
-            } else {
-                zeros += 1
-            }
+        while k > 0 {
+            candies.sort_unstable();
+            consumed += candies[n - 1];
+            candies[n - 1] /= 2;
+            k -= 1
         }
 
-        let ans = ones.min(zeros);
-
-        if ans % 2 != 0 {
-            writeln!(out, "DA").unwrap()
-        } else {
-            writeln!(out, "NET").unwrap()
-        }
+        writeln!(out, "{consumed}").unwrap()
     }
 }

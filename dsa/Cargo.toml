@@ -62,5 +62,13 @@ name = "reverse_polish"
 path = "src/reverse_polish.rs"
 
 [[bin]]
-name="testing"
-path="src/testing.rs"
+name = "testing"
+path = "src/testing.rs"
+
+[[bin]]
+name = "prims"
+path = "src/prims.rs"
+
+[[bin]]
+name = "graphs"
+path = "src/graphs.rs"

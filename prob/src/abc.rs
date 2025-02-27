@@ -27,27 +27,17 @@ fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let t = sc.next();
+    let t = sc.next::<i64>();
     for _ in 1..=t {
+        let n = sc.next::<i64>();
         let s = sc.next::<String>();
 
-        let mut ones = 0i32;
-        let mut zeros = 0i32;
+        let res = n > 2 || s == "00" || s == "11";
 
-        for i in s.chars() {
-            if i == '1' {
-                ones += 1
-            } else {
-                zeros += 1
-            }
-        }
-
-        let ans = ones.min(zeros);
-
-        if ans % 2 != 0 {
-            writeln!(out, "DA").unwrap()
+        if res {
+            writeln!(out, "NO").unwrap()
         } else {
-            writeln!(out, "NET").unwrap()
+            writeln!(out, "YES").unwrap()
         }
     }
 }

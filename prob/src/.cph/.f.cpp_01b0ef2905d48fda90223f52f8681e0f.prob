@@ -1,0 +1,1 @@
+{"name":"Local: f","url":"/mnt/hdd/CS/RustaceanUp/prob/src/f.cpp","tests":[{"id":1740498176811,"input":"5\n1 5\n2 10\n3 16\n9 1\n1 52\n","output":"5\n10 10\n16 0 16\n1 0 0 0 0 0 0 0 1\n52\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/CS/RustaceanUp/prob/src/f.cpp","group":"local","local":true}

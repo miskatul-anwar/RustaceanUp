@@ -1,4 +1,5 @@
 #![allow(unused)]
+use core::num;
 use std::io::{stdin, stdout, BufWriter, Write};
 
 #[derive(Default)]
@@ -29,25 +30,23 @@ fn main() {
 
     let t = sc.next();
     for _ in 1..=t {
-        let s = sc.next::<String>();
+        let n = sc.next::<usize>();
+        let nums: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+        let mut tracked = false;
 
-        let mut ones = 0i32;
-        let mut zeros = 0i32;
+        for i in 0..n - 1 {
+            for j in i..n - 1 {
+                if nums[j] > nums[i] && !tracked {
+                    write!(out, "{} ", nums[j]).unwrap();
+                    tracked = true
+                }
+            }
 
-        for i in s.chars() {
-            if i == '1' {
-                ones += 1
-            } else {
-                zeros += 1
+            if !tracked {
+                write!(out, "-1 ").unwrap()
             }
         }
 
-        let ans = ones.min(zeros);
-
-        if ans % 2 != 0 {
-            writeln!(out, "DA").unwrap()
-        } else {
-            writeln!(out, "NET").unwrap()
-        }
+        writeln!(out, "-1 ").unwrap()
     }
 }
