@@ -1,0 +1,1 @@
+{"name":"Local: a_adj_digit_sum","url":"/mnt/hdd/CS/RustaceanUp/prob/src/a_adj_digit_sum.rs","tests":[{"id":1740668543382,"input":"7\n1 2\n77 77\n997 999\n999 1\n1000 1\n1 11\n18 1\n","output":"Yes\nNo\nNo\nYes\nNo\nNo\nYes\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/CS/RustaceanUp/prob/src/a_adj_digit_sum.rs","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: reach_value","url":"/mnt/hdd/CS/RustaceanUp/prob/src/reach_value.rs","tests":[{"id":1740746319369,"input":"5\n1\n2\n10\n25\n200\n","output":"YES\nNO\nYES\nNO\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/CS/RustaceanUp/prob/src/reach_value.rs","group":"local","local":true}

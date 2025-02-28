@@ -1,0 +1,1 @@
+{"name":"Local: fizzbuzz","url":"/mnt/hdd/CS/RustaceanUp/prob/src/fizzbuzz.rs","tests":[{"id":1740669345332,"input":"7\n0\n5\n15\n42\n1337\n17101997\n998244353\n","output":"\n"},{"id":1740708666893,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/CS/RustaceanUp/prob/src/fizzbuzz.rs","group":"local","local":true}
