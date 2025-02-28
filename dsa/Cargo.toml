@@ -72,3 +72,18 @@ path = "src/prims.rs"
 [[bin]]
 name = "graphs"
 path = "src/graphs.rs"
+[[bin]]
+name="connnected_component"
+path="src/connnected_component.rs"
+[[bin]]
+name="dfs"
+path="src/dfs.rs"
+[[bin]]
+name="connected_component_store"
+path="src/connected_component_store.rs"
+[[bin]]
+name="dfs_cycle"
+path="src/dfs_cycle.rs"
+[[bin]]
+name="flood-fill-graph"
+path="src/flood-fill-graph.rs"
