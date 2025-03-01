@@ -22,25 +22,23 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
-pub fn maximal_square(matrix: Vec<Vec<char>>) -> i32 {
-    let m = matrix.len();
-    let n = matrix[0].len();
 
-    let mut dp = vec![vec![0; n + 1]; m + 1];
-    let mut mx = 0;
-
-    for i in 0..m {
-        for j in 0..n {
-            if matrix[i][j] == '1' {
-                dp[i + 1][j + 1] = (dp[i][j + 1].min(dp[i + 1][j])).min(dp[i][j]) + 1;
-                mx = mx.max(dp[i + 1][j + 1])
-            }
-        }
-    }
-
-    mx * mx
-}
 fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
+
+    let num1: Vec<char> = sc.next::<String>().chars().into_iter().collect();
+    let num2: Vec<char> = sc.next::<String>().chars().into_iter().collect();
+
+    let mut ans = String::new();
+
+    for (d1, d2) in num1.iter().zip(&num2) {
+        if d1 != d2 {
+            ans.push('1')
+        } else {
+            ans.push('0')
+        }
+    }
+
+    writeln!(out, "{}", ans).expect("Failed to write!!")
 }

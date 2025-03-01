@@ -20,3 +20,11 @@ path = "src/2d-grid-iter.rs"
 name = "some_variant"
 path = "src/some_variant.rs"
 
+[[bin]]
+name = "fibonacci-dp"
+path = "src/fibonacci-dp.rs"
+
+
+[[bin]]
+name = "fibonacci-space-optimized"
+path = "src/fibonacci-space-optimized.rs"
