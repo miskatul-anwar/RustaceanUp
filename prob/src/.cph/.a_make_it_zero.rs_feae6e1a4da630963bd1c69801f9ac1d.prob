@@ -1,0 +1,1 @@
+{"name":"Local: a_make_it_zero","url":"/mnt/hdd/CS/RustaceanUp/prob/src/a_make_it_zero.rs","tests":[{"id":1740759943438,"input":"2\n1 3\n391 555\n0 0\n9 4\n","output":"1337\n0\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/CS/RustaceanUp/prob/src/a_make_it_zero.rs","group":"local","local":true}

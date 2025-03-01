@@ -1,0 +1,1 @@
+{"name":"Local: b_perfecto","url":"/mnt/hdd/CS/RustaceanUp/prob/src/b_perfecto.rs","tests":[{"id":1740754551253,"input":"3\n1\n4\n5\n","output":"-1\n2 4 1 3\n5 1 4 3 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/CS/RustaceanUp/prob/src/b_perfecto.rs","group":"local","local":true}

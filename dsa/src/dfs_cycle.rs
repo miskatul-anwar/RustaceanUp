@@ -32,11 +32,9 @@ fn main() {
     let mut has_cycle = false;
 
     for i in 0..3 {
-        if !visited[i] {
-            if dfs(i, 0, &graph, &mut visited) {
-                has_cycle = true;
-                break;
-            }
+        if !visited[i] && dfs(i, 0, &graph, &mut visited) {
+            has_cycle = true;
+            break;
         }
     }
 
