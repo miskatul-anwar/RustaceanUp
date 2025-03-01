@@ -93,3 +93,16 @@ path = "src/dfs-tree.rs"
 [[bin]]
 name="dfs-tree-height-depth"
 path="src/dfs-tree-height-depth.rs"
+
+
+[[bin]]
+name = "grahams_convexhall"
+path = "src/grahams_convexhall.rs"
+
+[[bin]]
+name = "min-cost-dfs"
+path = "src/min-cost-dfs.rs"
+
+[[bin]]
+name = "dfs-gfg"
+path = "src/dfs-gfg.rs"
