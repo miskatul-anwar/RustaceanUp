@@ -416,3 +416,11 @@ path = "src/b_balanced_array.rs"
 [[bin]]
 name = "tower_of_hanoi"
 path = "src/tower_of_hanoi.rs"
+
+
+[[bin]]
+name="josephus"
+path="src/josephus.rs"
+[[bin]]
+name="convex_hull"
+path="src/convex_hull.rs"

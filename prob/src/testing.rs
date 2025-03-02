@@ -28,12 +28,5 @@ fn main() {
     let out = &mut BufWriter::new(stdout());
 
     let t = sc.next();
-    for _ in 1..=t {
-        
-    }
-}
-
-#[test]
-fn sum() {
-    
+    for _ in 1..=t {}
 }

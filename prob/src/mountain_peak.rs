@@ -22,22 +22,36 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
+fn next_heigher_peak(heights: &mut Vec<i32>) {
+    let mut max = -1;
+    let mut curr_max = 0;
 
+    for i in heights.iter_mut().rev() {
+        curr_max = *i;
+
+        if *i >= max {
+            *i = -1
+        } else {
+            *i = max
+        }
+
+        if max < curr_max {
+            max = curr_max
+        }
+    }
+}
 fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
     let n = sc.next();
-    let heights: Vec<i32> = (0..n).map(|_| sc.next()).collect();
-    let max = *heights.iter().max().unwrap();
+    let mut heights: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+
+    next_heigher_peak(&mut heights);
 
     for i in heights {
-        if i != max {
-            write!(out, "{} ", max).ok();
-        } else {
-            write!(out, "-1 ").ok();
-        }
+        write!(out, "{} ", i).unwrap()
     }
 
-    writeln!(out, "").ok();
+    writeln!(out, "").unwrap()
 }
