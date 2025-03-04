@@ -67,7 +67,7 @@ fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let s = sc.next::<String>();
+    let s: String = sc.next();
 
-    writeln!(out, "{}", remove_duplicate_letters(s)).unwrap()
+    writeln!(out, "{}", remove_duplicate_letters(s))?
 }

@@ -1,6 +1,6 @@
 #![allow(unused)]
 use std::{
-    collections::VecDeque,
+    collections::{BinaryHeap, VecDeque},
     io::{stdin, stdout, BufWriter, Write},
 };
 
@@ -33,18 +33,14 @@ fn main() {
     let t = sc.next();
     for _ in 1..=t {
         let n = sc.next();
-        let mut q: VecDeque<i32> = (0..n).map(|_| sc.next()).collect();
-        // let mut reversed = VecDeque::new();
+        let mut queue: BinaryHeap<i32> = (0..n).map(|_| sc.next()).collect();
+        let mut reversed = BinaryHeap::new();
 
-        // while let Some(front) = q.pop_front() {
-        //     reversed.push_front(front);
-        // }
+        while let Some(front) = queue.pop() {
+            reversed.push(front);
+        }
 
-        // for i in reversed {
-        //     write!(out, "{} ", i).ok();
-        // }
-
-        q.make_contiguous().reverse();
-        writeln!(out, "{:?}", q).ok();
+        reversed.iter().for_each(|i| write!(out, "{} ", i).unwrap());
+        writeln!(out).unwrap()
     }
 }

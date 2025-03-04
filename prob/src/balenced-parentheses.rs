@@ -22,37 +22,40 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
-fn next_heigher_peak(heights: &mut Vec<i32>) {
-    let mut max = -1;
-    let mut curr_max = 0;
+type Stack<T> = Vec<T>;
 
-    for i in heights.iter_mut().rev() {
-        curr_max = *i;
+fn par_match(open: char, close: char) -> bool {
+    let openers = "([{";
+    let closers = ")]}";
+    openers.find(open) == closers.find(close)
+}
+fn balenced_parentheses(s: &str) -> bool {
+    let mut stack = Stack::new();
 
-        if *i >= max {
-            *i = -1
+    for c in s.chars() {
+        if c == '(' || c == '{' || c == '[' {
+            stack.push(c);
+        } else if let Some(top) = stack.pop() {
+            if !par_match(top, c) {
+                return false;
+            }
         } else {
-            *i = max
-        }
-
-        if max < curr_max {
-            max = curr_max
+            return false;
         }
     }
+
+    stack.is_empty()
 }
 
 fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let n = sc.next();
-    let mut heights: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+    let s: String = sc.next();
 
-    next_heigher_peak(&mut heights);
-
-    for i in heights {
-        write!(out, "{} ", i).unwrap()
+    if balenced_parentheses(&s) {
+        writeln!(out, "YES").unwrap()
+    } else {
+        writeln!(out, "NO").unwrap()
     }
-
-    writeln!(out, "").unwrap()
 }

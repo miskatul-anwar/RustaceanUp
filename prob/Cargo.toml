@@ -439,3 +439,9 @@ path="src/a_naive_cheat.rs"
 [[bin]]
 name="a_petr_and_book"
 path="src/a_petr_and_book.rs"
+[[bin]]
+name="balenced-parentheses"
+path="src/balenced-parentheses.rs"
+[[bin]]
+name="implement_stack_using_queue"
+path="src/implement_stack_using_queue.rs"

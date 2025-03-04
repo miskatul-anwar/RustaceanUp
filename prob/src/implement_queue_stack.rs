@@ -1,12 +1,15 @@
 #![allow(unused)]
-struct MyQueue {
-    push_stack: Vec<i32>,
-    pop_stack: Vec<i32>,
+type Stack<T> = Vec<T>;
+
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
+struct Queue {
+    push_stack: Stack<i32>,
+    pop_stack: Stack<i32>,
 }
 
-impl MyQueue {
+impl Queue {
     fn new() -> Self {
-        MyQueue {
+        Queue {
             push_stack: Vec::new(),
             pop_stack: Vec::new(),
         }
@@ -18,10 +21,11 @@ impl MyQueue {
 
     fn pop(&mut self) -> i32 {
         if self.pop_stack.is_empty() {
-            while let Some(val) = self.push_stack.pop() {
-                self.pop_stack.push(val);
+            while let Some(top) = self.push_stack.pop() {
+                self.pop_stack.push(top);
             }
         }
+
         self.pop_stack.pop().unwrap()
     }
 
@@ -31,6 +35,7 @@ impl MyQueue {
                 self.pop_stack.push(val);
             }
         }
+
         *self.pop_stack.last().unwrap()
     }
 
@@ -40,7 +45,7 @@ impl MyQueue {
 }
 
 fn main() {
-    let mut q = MyQueue::new();
+    let mut q = Queue::new();
     q.push(2);
     let v = q.pop();
     let b = q.empty();
