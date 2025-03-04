@@ -1,5 +1,8 @@
 #![allow(unused)]
-use std::io::{stdin, stdout, BufWriter, Write};
+use std::{
+    io::{stdin, stdout, BufWriter, Write},
+    thread::panicking,
+};
 
 #[derive(Default)]
 struct Scanner {
@@ -22,34 +25,33 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
-fn backspace_compare(mut s: String, mut t: String) -> bool {
-    fn process(input: String) -> String {
-        let mut stack = Vec::new();
-
-        for c in input.chars() {
-            if c == '#' {
-                stack.pop();
-            } else {
-                stack.push(c);
-            }
-        }
-
-        stack.into_iter().collect()
-    }
-
-    process(s) == process(t)
-}
 
 fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let s = sc.next::<String>();
-    let t = sc.next::<String>();
-    
-    if backspace_compare(s, t) {
-        writeln!(out, "YES").unwrap()
-    } else {
-        writeln!(out, "NO").unwrap()
+    let n: i32 = sc.next();
+    let mut days = [0; 7];
+
+    for i in 0..7 {
+        days[i] = sc.next();
     }
+
+    let mut pages = 0;
+    let mut day = 0;
+
+    loop {
+        pages += days[day];
+        day += 1;
+
+        if pages >= n {
+            break;
+        }
+
+        if day >= 7 {
+            day %= 7
+        }
+    }
+
+    writeln!(out, "{}", day).unwrap()
 }

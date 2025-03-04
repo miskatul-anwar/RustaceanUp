@@ -106,3 +106,6 @@ path = "src/min-cost-dfs.rs"
 [[bin]]
 name = "dfs-gfg"
 path = "src/dfs-gfg.rs"
+[[bin]]
+name="tree-problem1"
+path="src/tree-problem1.rs"

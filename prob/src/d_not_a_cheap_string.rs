@@ -1,5 +1,8 @@
 #![allow(unused)]
-use std::io::{stdin, stdout, BufWriter, Write};
+use std::{
+    collections::VecDeque,
+    io::{stdin, stdout, BufWriter, Write},
+};
 
 #[derive(Default)]
 struct Scanner {
@@ -22,34 +25,33 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
-fn backspace_compare(mut s: String, mut t: String) -> bool {
-    fn process(input: String) -> String {
-        let mut stack = Vec::new();
-
-        for c in input.chars() {
-            if c == '#' {
-                stack.pop();
-            } else {
-                stack.push(c);
-            }
-        }
-
-        stack.into_iter().collect()
-    }
-
-    process(s) == process(t)
-}
 
 fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let s = sc.next::<String>();
-    let t = sc.next::<String>();
-    
-    if backspace_compare(s, t) {
-        writeln!(out, "YES").unwrap()
-    } else {
-        writeln!(out, "NO").unwrap()
+    let t = sc.next();
+    for _ in 1..=t {
+        let w: String = sc.next();
+        let p: usize = sc.next();
+        let mut pr = 0;
+
+        for ch in w.chars() {
+            pr += ch as usize - 96
+        }
+
+        if pr <= p {
+            writeln!(out, "{}", w).unwrap();
+            continue;
+        }
+
+        let mut w: Vec<char> = w.chars().into_iter().collect();
+
+        for ch in w {
+            write!(out, "{}", ch).unwrap()
+        }
+
+        writeln!(out).unwrap()
     }
 }
+// FIXME
