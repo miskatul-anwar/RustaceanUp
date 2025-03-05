@@ -1,4 +1,5 @@
-use std::f64;
+use plotters::prelude::*;
+use std::{error::Error, f64, process::Command};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 struct Point {
@@ -84,8 +85,56 @@ fn graham_scan(points: &mut Vec<Point>) -> Vec<Point> {
 
     s
 }
+fn plot_points(points: &[Point], filename: &str) -> Result<(), Box<dyn std::error::Error>> {
+    let root = BitMapBackend::new(filename, (800, 600)).into_drawing_area();
+    root.fill(&WHITE)?;
 
-fn main() {
+    let x_min = points.iter().map(|p| p.x).min().unwrap_or(0) - 1;
+    let x_max = points.iter().map(|p| p.x).max().unwrap_or(10) + 1;
+    let y_min = points.iter().map(|p| p.y).min().unwrap_or(0) - 1;
+    let y_max = points.iter().map(|p| p.y).max().unwrap_or(10) + 1;
+
+    let mut chart = ChartBuilder::on(&root)
+        .caption("Convex Hull", ("CaskaydiaCove Nerd font Mono", 30))
+        .margin(10)
+        .x_label_area_size(30)
+        .y_label_area_size(30)
+        .build_cartesian_2d(x_min..x_max, y_min..y_max)?;
+
+    chart.configure_mesh().draw()?;
+
+    // Draw points as red circles
+    chart.draw_series(
+        points
+            .iter()
+            .map(|p| Circle::new((p.x, p.y), 5, RED.filled())),
+    )?;
+
+    // Connect points with a blue line, ensuring a cycle is formed
+    let mut cycle_points = points.to_vec();
+    if let Some(&first) = points.first() {
+        cycle_points.push(first); // Append the first point at the end to complete the cycle
+    }
+
+    chart.draw_series(LineSeries::new(
+        cycle_points.iter().map(|p| (p.x, p.y)),
+        &BLUE,
+    ))?;
+
+    root.present()?;
+    println!("Plot saved to {}", filename);
+
+    let output = Command::new("eog")
+        .arg("scatter.png") // You can use `.arg()` instead of `.args(["scatter.png"])`
+        .output()
+        .expect("Failed to run the command!");
+
+    println!("{}", String::from_utf8_lossy(&output.stdout)); // Print the output
+
+    Ok(())
+}
+
+fn main() -> Result<(), Box<dyn Error>> {
     let mut points: Vec<Point> = vec![
         Point::new(0, 0),
         Point::new(4, 0),
@@ -95,7 +144,7 @@ fn main() {
     ];
 
     let mut s: Vec<Point> = graham_scan(&mut points);
-
+    plot_points(&s, "scatter.png")?;
     println!("Points in anti-clockwise order");
     for &p in points.iter() {
         println!("{} {}", p.x, p.y)
@@ -108,7 +157,9 @@ fn main() {
     }
 
     println!("Points in Convex Hull");
+
     while let Some(top) = t.pop() {
         println!("{} {}", top.x, top.y)
     }
+    Ok(())
 }
