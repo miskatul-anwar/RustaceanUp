@@ -19,7 +19,9 @@ fn find_ref(points: &Vec<Point>) -> Point {
     let mut min_point = points[0];
 
     for i in 1..points.len() {
-        if points[i].y < min_point.y || points[i].y == min_point.y && points[i].x < min_point.x {
+        let condition_met =
+            points[i].y < min_point.y || points[i].y == min_point.y && points[i].x < min_point.x;
+        if condition_met {
             min_point = points[i]
         }
     }
@@ -56,7 +58,7 @@ fn compare(p1: &Point, p2: &Point) -> std::cmp::Ordering {
         unsafe { reff = REFF };
         squared_dist(&reff, p1).cmp(&squared_dist(&reff, p2))
     } else {
-        angle1.partial_cmp(&angle2).unwrap() // Using `.unwrap()` because angles should never be NaN
+        angle1.partial_cmp(&angle2).unwrap()
     }
 }
 
@@ -85,6 +87,7 @@ fn graham_scan(points: &mut Vec<Point>) -> Vec<Point> {
 
     s
 }
+
 fn plot_points(points: &[Point], filename: &str) -> Result<(), Box<dyn std::error::Error>> {
     let root = BitMapBackend::new(filename, (800, 600)).into_drawing_area();
     root.fill(&WHITE)?;
@@ -125,7 +128,7 @@ fn plot_points(points: &[Point], filename: &str) -> Result<(), Box<dyn std::erro
     println!("Plot saved to {}", filename);
 
     let output = Command::new("eog")
-        .arg("scatter.png") // You can use `.arg()` instead of `.args(["scatter.png"])`
+        .arg(filename)
         .output()
         .expect("Failed to run the command!");
 

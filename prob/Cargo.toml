@@ -445,3 +445,6 @@ path="src/balenced-parentheses.rs"
 [[bin]]
 name="implement_stack_using_queue"
 path="src/implement_stack_using_queue.rs"
+[[bin]]
+name="factorial"
+path="src/factorial.rs"

@@ -50,4 +50,5 @@ fn main() {
     let v = q.pop();
     let b = q.empty();
     let p = q.peek();
+    println!("{:?}", q);
 }

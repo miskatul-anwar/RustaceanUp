@@ -1,8 +1,5 @@
 #![allow(unused)]
-use std::{
-    collections::VecDeque,
-    io::{stdin, stdout, BufWriter, Write},
-};
+use std::io::{stdin, stdout, BufWriter, Write};
 
 #[derive(Default)]
 struct Scanner {
@@ -25,29 +22,17 @@ impl Scanner {
 /*~~~~~~~~~~~~~*
  * CODE BELOW: *
  *~~~~~~~~~~~~~*/
-
+fn factorial(n: usize) -> usize {
+    match n {
+        0 => 1,
+        1 => 1,
+        _ => n * factorial(n - 1),
+    }
+}
 fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let mut q: VecDeque<i32> = VecDeque::new();
-    let t = sc.next();
-    for _ in 1..=t {
-        let mut x: i32 = sc.next();
-
-        if x == 1 {
-            x = sc.next();
-            q.push_back(x);
-        } else if x == 2 {
-            if !q.is_empty() {
-                q.pop_front();
-            }
-        } else {
-            if let Some(front) = q.front() {
-                writeln!(out, "{}", front).unwrap()
-            } else {
-                writeln!(out, "Empty!").unwrap()
-            }
-        }
-    }
+    let n = sc.next();
+    writeln!(out, "{} ", factorial(n)).unwrap()
 }
