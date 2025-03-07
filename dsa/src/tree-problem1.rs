@@ -1,50 +1,66 @@
-#![allow(unused)]
-use std::io::{stdin, stdout, BufWriter, Write};
-
-#[derive(Default)]
-struct Scanner {
+use std::io::{self, BufRead};
+struct Scanner<R> {
+    reader: R,
     buffer: Vec<String>,
 }
 
-impl Scanner {
+impl<R: BufRead> Scanner<R> {
+    fn new(reader: R) -> Self {
+        Self {
+            reader,
+            buffer: vec![],
+        }
+    }
+
     fn next<T: std::str::FromStr>(&mut self) -> T {
         loop {
             if let Some(token) = self.buffer.pop() {
                 return token.parse().ok().expect("Failed parse");
             }
             let mut input = String::new();
-            stdin().read_line(&mut input).expect("Failed read");
+            self.reader.read_line(&mut input).expect("Failed read");
             self.buffer = input.split_whitespace().rev().map(String::from).collect();
         }
     }
 }
 
-/*~~~~~~~~~~~~~*
- * CODE BELOW: *
- *~~~~~~~~~~~~~*/
-static mut SUBTREE_SUM: usize = 0;
-
-fn dfs(node: usize, parent: usize, tree: &Vec<Vec<usize>>) {
-    unsafe { SUBTREE_SUM += node }
+fn dfs(
+    node: usize,
+    parent: usize,
+    tree: &Vec<Vec<usize>>,
+    subtree_sum: &mut Vec<usize>,
+    even_node: &mut Vec<usize>,
+) {
+    subtree_sum[node] = node;
+    if node % 2 == 0 {
+        even_node[node] = 1;
+    }
 
     for &child in &tree[node] {
         if child == parent {
             continue;
         }
 
-        dfs(child, node, tree);
+        dfs(child, node, tree, subtree_sum, even_node);
+
+        // Add child's data to parent's subtree sum
+        subtree_sum[node] += subtree_sum[child];
+        even_node[node] += even_node[child];
     }
 }
 
 fn main() {
-    let mut sc = Scanner::default();
-    let out = &mut BufWriter::new(stdout());
+    let stdin = io::stdin();
+    let mut sc = Scanner::new(stdin.lock());
 
+    print!("Enter the number of nodes: ");
     let n: usize = sc.next();
     let mut tree: Vec<Vec<usize>> = vec![vec![]; n + 1];
+    let mut subtree_sum: Vec<usize> = vec![0; n + 1];
+    let mut even_node: Vec<usize> = vec![0; n + 1];
 
+    println!("\nEnter the edges:");
     for _ in 0..n - 1 {
-        // Fix: A tree with `n` nodes has `n-1` edges
         let x: usize = sc.next();
         let y: usize = sc.next();
 
@@ -52,22 +68,16 @@ fn main() {
         tree[y].push(x);
     }
 
-    let q: usize = sc.next();
+    print!("Enter the starting node: ");
+    let root: usize = sc.next();
 
-    for _ in 0..q {
-        let v: usize = sc.next();
+    dfs(root, usize::MAX, &tree, &mut subtree_sum, &mut even_node);
 
-        unsafe {
-            SUBTREE_SUM = 0;
-        }
+    print!("Subtree sum of which node?: ");
+    let query_node: usize = sc.next();
 
-        dfs(v, usize::MAX, &tree);
-
-        let mut ans;
-        unsafe {
-            ans = SUBTREE_SUM;
-        }
-
-        writeln!(out, "{}", ans).unwrap()
-    }
+    println!(
+        "Subtree sum: {}\nEven Node Count: {}",
+        subtree_sum[query_node], even_node[query_node]
+    );
 }
