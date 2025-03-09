@@ -109,3 +109,9 @@ path = "src/dfs-gfg.rs"
 [[bin]]
 name="tree-problem1"
 path="src/tree-problem1.rs"
+[[bin]]
+name="convex_hull"
+path="src/convex_hull.rs"
+[[bin]]
+name="deletes_node_linklist"
+path="src/deletes_node_linklist.rs"

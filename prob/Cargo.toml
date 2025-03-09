@@ -452,5 +452,12 @@ path = "src/factorial.rs"
 name = "b_taxi"
 path = "src/b_taxi.rs"
 [[bin]]
-name="array_hashmap"
-path="src/array_hashmap.rs"
+name = "array_hashmap"
+path = "src/array_hashmap.rs"
+
+[[bin]]
+name = "closest_prime"
+path = "src/closest_prime.rs"
+[[bin]]
+name="gcd_of_string"
+path="src/gcd_of_string.rs"

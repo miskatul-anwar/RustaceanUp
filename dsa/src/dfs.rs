@@ -1,4 +1,4 @@
-use std::io::{stdin, stdout, BufWriter, Write};
+use std::io::{stdin, stdout, BufWriter};
 
 #[derive(Default)]
 struct Scanner {
@@ -18,12 +18,22 @@ impl Scanner {
     }
 }
 
-fn dfs(vertex: usize, graph: &Vec<Vec<usize>>, visited: &mut Vec<bool>) {
+fn dfs(
+    vertex: usize,
+    graph: &Vec<Vec<usize>>,
+    visited: &mut Vec<bool>,
+    even_nodes: &mut Vec<usize>,
+) {
     visited[vertex] = true;
 
+    if vertex % 2 == 0 {
+        even_nodes.push(vertex)
+    }
+
+    print!("{} -> ", vertex);
     for &child in &graph[vertex] {
         if !visited[child] {
-            dfs(child, graph, visited);
+            dfs(child, graph, visited, even_nodes);
         }
     }
 }
@@ -37,6 +47,7 @@ fn main() {
 
     let mut graph: Vec<Vec<usize>> = vec![vec![]; n + 1];
     let mut visited: Vec<bool> = vec![false; n + 1];
+    let mut even_nodes: Vec<usize> = Vec::new();
 
     for _ in 0..m {
         let v1: usize = sc.next();
@@ -46,5 +57,7 @@ fn main() {
         graph[v2].push(v1);
     }
 
-    dfs(1, &graph, &mut visited);
+    dfs(1, &graph, &mut visited, &mut even_nodes);
+
+    println!("Even Nodes: {:?}", even_nodes);
 }
