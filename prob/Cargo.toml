@@ -461,3 +461,11 @@ path = "src/closest_prime.rs"
 [[bin]]
 name="gcd_of_string"
 path="src/gcd_of_string.rs"
+
+[[bin]]
+name = "a_insearch_of_ease"
+path = "src/a_insearch_of_ease.rs"
+
+[[bin]]
+name = "a_wanna_be_the_guy"
+path = "src/a_wanna_be_the_guy.rs"

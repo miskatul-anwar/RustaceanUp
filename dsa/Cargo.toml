@@ -115,3 +115,22 @@ path="src/convex_hull.rs"
 [[bin]]
 name="deletes_node_linklist"
 path="src/deletes_node_linklist.rs"
+
+[[bin]]
+name = "linked_list1"
+path = "src/linked_list1.rs"
+
+[[bin]]
+name = "double_num_linkedlist"
+path = "src/double_num_linkedlist.rs"
+
+[[bin]]
+name = "remove_middle_linkedlist"
+path = "src/remove_middle_linkedlist.rs"
+[[bin]]
+name="remove_nodes_linkedlist"
+path="src/remove_nodes_linkedlist.rs"
+
+[[bin]]
+name = "new"
+path = "src/new.rs"
