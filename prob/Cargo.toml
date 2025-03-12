@@ -469,3 +469,45 @@ path = "src/a_insearch_of_ease.rs"
 [[bin]]
 name = "a_wanna_be_the_guy"
 path = "src/a_wanna_be_the_guy.rs"
+
+[[bin]]
+name = "a_games"
+path = "src/a_games.rs"
+
+[[bin]]
+name = "a_candies_and_two_sis"
+path = "src/a_candies_and_two_sis.rs"
+
+[[bin]]
+name = "a_yes"
+path = "src/a_yes.rs"
+
+[[bin]]
+name = "a_anton_and_letters"
+path = "src/a_anton_and_letters.rs"
+
+
+
+[[bin]]
+name = "a_magnets"
+path = "src/a_magnets.rs"
+
+[[bin]]
+name = "a_presents"
+path = "src/a_presents.rs"
+
+[[bin]]
+name = "a_is_your_horseshoe"
+path = "src/a_is_your_horseshoe.rs"
+
+[[bin]]
+name = "a_george_and_accommodation"
+path = "src/a_george_and_accommodation.rs"
+
+[[bin]]
+name = "b_queue_at_school"
+path = "src/b_queue_at_school.rs"
+
+[[bin]]
+name = "a_domino_piling"
+path = "src/a_domino_piling.rs"

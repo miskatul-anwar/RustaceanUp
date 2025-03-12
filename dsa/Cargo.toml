@@ -134,3 +134,7 @@ path="src/remove_nodes_linkedlist.rs"
 [[bin]]
 name = "new"
 path = "src/new.rs"
+
+[[bin]]
+name = "increment"
+path = "src/increment.rs"
