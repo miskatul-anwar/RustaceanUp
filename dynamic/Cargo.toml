@@ -28,3 +28,20 @@ path = "src/fibonacci-dp.rs"
 [[bin]]
 name = "fibonacci-space-optimized"
 path = "src/fibonacci-space-optimized.rs"
+
+
+[[bin]]
+name = "a-frog-1"
+path = "src/a-frog-1.rs"
+
+[[bin]]
+name = "b-frog-2"
+path = "src/b-frog-2.rs"
+
+[[bin]]
+name = "long-inc-sub"
+path = "src/long-inc-sub.rs"
+
+[[bin]]
+name = "coin-change"
+path = "src/coin-change.rs"

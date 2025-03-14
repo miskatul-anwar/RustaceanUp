@@ -511,3 +511,23 @@ path = "src/b_queue_at_school.rs"
 [[bin]]
 name = "a_domino_piling"
 path = "src/a_domino_piling.rs"
+
+[[bin]]
+name = "a_anton_and_danik"
+path = "src/a_anton_and_danik.rs"
+
+[[bin]]
+name = "a_gravity_flip"
+path = "src/a_gravity_flip.rs"
+
+[[bin]]
+name = "a_hit_lottery"
+path = "src/a_hit_lottery.rs"
+
+[[bin]]
+name = "hello-atcoder"
+path = "src/hello-atcoder.rs"
+
+[[bin]]
+name = "a-insomnia-cure"
+path = "src/a-insomnia-cure.rs"
