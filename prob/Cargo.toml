@@ -531,3 +531,15 @@ path = "src/hello-atcoder.rs"
 [[bin]]
 name = "a-insomnia-cure"
 path = "src/a-insomnia-cure.rs"
+
+[[bin]]
+name = "a-vanaya-and-fence"
+path = "src/a-vanaya-and-fence.rs"
+
+[[bin]]
+name = "lucky-four"
+path = "src/lucky-four.rs"
+
+[[bin]]
+name = "dark-light"
+path = "src/dark-light.rs"
