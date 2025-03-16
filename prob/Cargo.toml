@@ -543,3 +543,11 @@ path = "src/lucky-four.rs"
 [[bin]]
 name = "dark-light"
 path = "src/dark-light.rs"
+
+[[bin]]
+name = "a_i-love-username"
+path = "src/a_i-love-username.rs"
+
+[[bin]]
+name = "a-lucky"
+path = "src/a-lucky.rs"
