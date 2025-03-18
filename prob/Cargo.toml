@@ -551,3 +551,11 @@ path = "src/a_i-love-username.rs"
 [[bin]]
 name = "a-lucky"
 path = "src/a-lucky.rs"
+
+[[bin]]
+name = "a-arrival-of-the-general"
+path = "src/a-arrival-of-the-general.rs"
+
+[[bin]]
+name = "a-short-sort"
+path = "src/a-short-sort.rs"

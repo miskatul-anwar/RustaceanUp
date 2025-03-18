@@ -45,3 +45,15 @@ path = "src/long-inc-sub.rs"
 [[bin]]
 name = "coin-change"
 path = "src/coin-change.rs"
+
+[[bin]]
+name = "rod-cutting"
+path = "src/rod-cutting.rs"
+
+[[bin]]
+name = "lcs"
+path = "src/lcs.rs"
+
+[[bin]]
+name = "tribonacci"
+path = "src/tribonacci.rs"
