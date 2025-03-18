@@ -57,3 +57,23 @@ path = "src/lcs.rs"
 [[bin]]
 name = "tribonacci"
 path = "src/tribonacci.rs"
+
+[[bin]]
+name = "lucas-numbers"
+path = "src/lucas-numbers.rs"
+
+[[bin]]
+name = "binomial-coefficient"
+path = "src/binomial-coefficient.rs"
+
+[[bin]]
+name = "pascals-triangle"
+path = "src/pascals-triangle.rs"
+
+[[bin]]
+name = "nth-row-pascals-triangle"
+path = "src/nth-row-pascals-triangle.rs"
+
+[[bin]]
+name = "catalan-number"
+path = "src/catalan-number.rs"
