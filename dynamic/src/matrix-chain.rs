@@ -2,7 +2,7 @@
 use std::cmp::min;
 use std::usize::MAX;
 
-fn matrix_multiplication(arr: &Vec<usize>) -> usize {
+fn mcm(arr: &Vec<usize>) -> usize {
     let n = arr.len();
     let mut dp = vec![vec![0; n]; n];
 
@@ -23,7 +23,7 @@ fn matrix_multiplication(arr: &Vec<usize>) -> usize {
 
 fn main() {
     let arr = vec![1, 2, 3, 4, 3];
-    let result = matrix_multiplication(&arr);
+    let result = mcm(&arr);
 
-    println!("Minimum number of multiplications is: {}", result);
+    println!("Minimum number of multiplications is: {}", result)
 }
