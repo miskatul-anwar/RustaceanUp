@@ -53,7 +53,6 @@ fn main() {
     let stdin = io::stdin();
     let mut sc = Scanner::new(stdin.lock());
 
-    print!("Enter the number of nodes: ");
     let n: usize = sc.next();
     let mut tree: Vec<Vec<usize>> = vec![vec![]; n + 1];
     let mut subtree_sum: Vec<usize> = vec![0; n + 1];
@@ -68,12 +67,10 @@ fn main() {
         tree[y].push(x);
     }
 
-    print!("Enter the starting node: ");
     let root: usize = sc.next();
 
     dfs(root, usize::MAX, &tree, &mut subtree_sum, &mut even_node);
 
-    print!("Subtree sum of which node?: ");
     let query_node: usize = sc.next();
 
     println!(

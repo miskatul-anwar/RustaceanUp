@@ -81,3 +81,12 @@ path = "src/catalan-number.rs"
 [[bin]]
 name = "matrix-chain"
 path = "src/matrix-chain.rs"
+
+[[bin]]
+name = "decoding-digit-seq"
+path = "src/decoding-digit-seq.rs"
+
+[[bin]]
+name = "longest-palindrome"
+path = "src/longest-palindrome.rs"
+

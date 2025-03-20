@@ -559,3 +559,15 @@ path = "src/a-arrival-of-the-general.rs"
 [[bin]]
 name = "a-short-sort"
 path = "src/a-short-sort.rs"
+
+[[bin]]
+name = "a-dislike-of-threes"
+path = "src/a-dislike-of-threes.rs"
+
+[[bin]]
+name = "a-police-recruits"
+path = "src/a-police-recruits.rs"
+
+[[bin]]
+name = "count-unique-permutaion"
+path = "src/count-unique-permutaion.rs"
