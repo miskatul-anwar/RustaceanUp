@@ -571,3 +571,170 @@ path = "src/a-police-recruits.rs"
 [[bin]]
 name = "count-unique-permutaion"
 path = "src/count-unique-permutaion.rs"
+
+[[bin]]
+name = "a-dubstep"
+path = "src/a-dubstep.rs"
+
+
+[[bin]]
+name = "name"
+path = "src/name.rs"
+
+[[bin]]
+name = "a-kefa-and-first-steps"
+path = "src/a-kefa-and-first-steps.rs"
+
+[[bin]]
+name = "a-game-with-sticks"
+path = "src/a-game-with-sticks.rs"
+
+[[bin]]
+name = "a-odd-divisor"
+path = "src/a-odd-divisor.rs"
+
+[[bin]]
+name = "a-serval-and-string"
+path = "src/a-serval-and-string.rs"
+
+[[bin]]
+name = "b-serval-and-final-mex"
+path = "src/b-serval-and-final-mex.rs"
+
+[[bin]]
+name = "c-serval-and-the-formulae"
+path = "src/c-serval-and-the-formulae.rs"
+
+[[bin]]
+name = "b-lecture"
+path = "src/b-lecture.rs"
+
+[[bin]]
+name = "a-game-23"
+path = "src/a-game-23.rs"
+
+[[bin]]
+name = "b-card-game"
+path = "src/b-card-game.rs"
+
+[[bin]]
+name = "a-again-twentyfive"
+path = "src/a-again-twentyfive.rs"
+
+[[bin]]
+name = "b-sale"
+path = "src/b-sale.rs"
+
+[[bin]]
+name = "b-multiplyby2-divideby6"
+path = "src/b-multiplyby2-divideby6.rs"
+
+[[bin]]
+name = "a-tram"
+path = "src/a-tram.rs"
+
+[[bin]]
+name = "a-nearly-lucky-number"
+path = "src/a-nearly-lucky-number.rs"
+
+
+[[bin]]
+name = "a-plus-or-minus"
+path = "src/a-plus-or-minus.rs"
+
+[[bin]]
+name = "a-new-year-and-hurry"
+path = "src/a-new-year-and-hurry.rs"
+
+[[bin]]
+name = "a-division"
+path = "src/a-division.rs"
+
+[[bin]]
+name = "a-sereja-and-dima"
+path = "src/a-sereja-and-dima.rs"
+
+[[bin]]
+name = "a-new-year-transportation"
+path = "src/a-new-year-transportation.rs"
+
+[[bin]]
+name = "a-interesting-drink"
+path = "src/a-interesting-drink.rs"
+
+[[bin]]
+name = "a-laptops"
+path = "src/a-laptops.rs"
+
+[[bin]]
+name = "a-cinema-line"
+path = "src/a-cinema-line.rs"
+
+[[bin]]
+name = "v-comparison"
+path = "src/v-comparison.rs"
+
+
+[[bin]]
+name = "a-jzzhu-and-children"
+path = "src/a-jzzhu-and-children.rs"
+
+[[bin]]
+name = "d2"
+path = "src/d2.rs"
+
+[[bin]]
+name = "h"
+path = "src/h.rs"
+
+[[bin]]
+name = "a-spy-detected"
+path = "src/a-spy-detected.rs"
+
+[[bin]]
+name = "a-cloudberry-jam"
+path = "src/a-cloudberry-jam.rs"
+
+[[bin]]
+name = "b-large-array-and-segments"
+path = "src/b-large-array-and-segments.rs"
+
+[[bin]]
+name = "c-disappearing-permutation"
+path = "src/c-disappearing-permutation.rs"
+
+[[bin]]
+name = "d-even-string"
+path = "src/d-even-string.rs"
+
+[[bin]]
+name = "a-minimize"
+path = "src/a-minimize.rs"
+
+[[bin]]
+name = "a-nastia-and-nearly-good-numbers"
+path = "src/a-nastia-and-nearly-good-numbers.rs"
+
+[[bin]]
+name = "b-having-been-a-treasurer"
+path = "src/b-having-been-a-treasurer.rs"
+
+[[bin]]
+name = "a-anton-and-polyhedrons"
+path = "src/a-anton-and-polyhedrons.rs"
+
+[[bin]]
+name = "a-final-verdict"
+path = "src/a-final-verdict.rs"
+
+[[bin]]
+name = "a-minutes-before-the-new-year"
+path = "src/a-minutes-before-the-new-year.rs"
+
+[[bin]]
+name = "dijikstra"
+path = "src/dijikstra.rs"
+
+[[bin]]
+name = "a-plus-one-the-subset"
+path = "src/a-plus-one-the-subset.rs"

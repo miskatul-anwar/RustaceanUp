@@ -19,26 +19,34 @@ impl Scanner {
     }
 }
 
+fn solve(scan: &mut Scanner, out: &mut BufWriter<Stdout>, sum: &mut usize) {
+    let s: String = scan.next();
+
+    match s.as_str() {
+        "Tetrahedron" => *sum += 4,
+        "Cube" => *sum += 6,
+        "Octahedron" => *sum += 8,
+        "Dodecahedron" => *sum += 12,
+        "Icosahedron" => *sum += 20,
+        _ => {}
+    }
+}
+
 fn main() {
-    let mut sc = Scanner::default();
+    let mut scan = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let n = sc.next();
-    let points: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+    let mut t: usize = scan.next();
+    let mut sum: usize = 0;
 
-    let mut max = points[0];
-    let mut min = points[0];
-    let mut cnt = 0;
-
-    for i in 1..n {
-        if points[i] > max {
-            max = points[i];
-            cnt += 1
-        } else if points[i] < min {
-            min = points[i];
-            cnt += 1
+    loop {
+        if t == 0 {
+            break;
         }
+
+        solve(&mut scan, out, &mut sum);
+        t -= 1
     }
 
-    writeln!(out, "{}", cnt).unwrap()
+    writeln!(out, "{}", sum).unwrap()
 }

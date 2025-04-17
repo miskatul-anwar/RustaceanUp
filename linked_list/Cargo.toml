@@ -1,0 +1,23 @@
+[package]
+name = "linked_list"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bin]]
+name = "reverse-linked-list"
+path = "src/reverse-linked-list.rs"
+
+
+[[bin]]
+name = "iterate-linked-list"
+path = "src/iterate-linked-list.rs"
+
+[[bin]]
+name = "find-max-node"
+path = "src/find-max-node.rs"
+
+[[bin]]
+name = "merge-two-sorted-lists"
+path = "src/merge-two-sorted-lists.rs"

@@ -1,7 +1,7 @@
-int main()
-{
-  for (int i = 0; i < count; ++i) {
-  }
+#include <iostream>
+#include <ostream>
 
-        return 0;
+int main() {
+  std::cout << "Hello, World!" << std::endl;
+  return 0;
 }

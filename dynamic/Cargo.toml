@@ -94,3 +94,7 @@ path = "src/longest-palindrome.rs"
 [[bin]]
 name = "longest-palindrome-n2"
 path = "src/longest-palindrome-n2.rs"
+
+[[bin]]
+name = "coin-change-top-down"
+path = "src/coin-change-top-down.rs"

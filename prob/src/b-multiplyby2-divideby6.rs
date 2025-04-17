@@ -1,5 +1,5 @@
 #![allow(unused)]
-use std::io::{stdin, stdout, BufWriter, Stdout, Write};
+use std::io::{stdin, stdout, BufWriter, Write};
 
 #[derive(Default)]
 struct Scanner {
@@ -23,22 +23,21 @@ fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let n = sc.next();
-    let points: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+    let t = sc.next();
+    for _ in 1..=t {
+        let mut n: i32 = sc.next();
+        let mut steps = 0;
 
-    let mut max = points[0];
-    let mut min = points[0];
-    let mut cnt = 0;
-
-    for i in 1..n {
-        if points[i] > max {
-            max = points[i];
-            cnt += 1
-        } else if points[i] < min {
-            min = points[i];
-            cnt += 1
+        while n % 6 == 0 {
+            n /= 6;
+            steps += 1
         }
-    }
 
-    writeln!(out, "{}", cnt).unwrap()
+        while n % 2 == 0 {
+            n /= 2;
+            steps += 1
+        }
+
+        writeln!(out, "{}", steps).unwrap()
+    }
 }

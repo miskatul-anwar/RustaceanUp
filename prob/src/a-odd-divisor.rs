@@ -1,5 +1,5 @@
 #![allow(unused)]
-use std::io::{stdin, stdout, BufWriter, Stdout, Write};
+use std::io::{stdin, stdout, BufWriter, Write};
 
 #[derive(Default)]
 struct Scanner {
@@ -19,26 +19,35 @@ impl Scanner {
     }
 }
 
+const N: u64 = 10e7 as u64;
+
 fn main() {
     let mut sc = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let n = sc.next();
-    let points: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+    let t = sc.next();
+    for _ in 1..=t {
+        let n: u64 = sc.next();
+        let mut found = false;
 
-    let mut max = points[0];
-    let mut min = points[0];
-    let mut cnt = 0;
+        if n & 1 == 1 {
+            found = true
+        } else {
+            let mut div = n;
 
-    for i in 1..n {
-        if points[i] > max {
-            max = points[i];
-            cnt += 1
-        } else if points[i] < min {
-            min = points[i];
-            cnt += 1
+            while div > 2 {
+                div /= 2;
+                if div & 1 == 1 && n % div == 0 {
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if found {
+            writeln!(out, "YES").unwrap()
+        } else {
+            writeln!(out, "NO").unwrap()
         }
     }
-
-    writeln!(out, "{}", cnt).unwrap()
 }

@@ -10,6 +10,7 @@ trait Student: Person {
 trait Programmer {
     fn fav_language(&self) -> String;
 }
+
 trait CompSciStudent: Programmer + Student {
     fn git_username(&self) -> String;
 }
@@ -23,4 +24,5 @@ fn comp_sci_student_greeting(student: &dyn CompSciStudent) -> String {
         student.git_username()
     )
 }
+
 fn main() {}

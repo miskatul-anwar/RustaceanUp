@@ -1,5 +1,5 @@
-#![allow(unused)]
 use std::{
+    cmp::min,
     i32::MAX,
     io::{stdin, stdout, BufWriter, Write},
 };
@@ -29,7 +29,7 @@ pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
     for a in 1..=amount {
         for &coin in &coins {
             if a >= coin && dp[(a - coin) as usize] != MAX {
-                dp[a as usize] = dp[a as usize].min(dp[(a - coin) as usize] + 1);
+                dp[a as usize] = min(dp[a as usize], dp[(a - coin) as usize] + 1)
             }
         }
     }

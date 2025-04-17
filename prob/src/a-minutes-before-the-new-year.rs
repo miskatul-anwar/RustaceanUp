@@ -19,26 +19,26 @@ impl Scanner {
     }
 }
 
+fn solve(scan: &mut Scanner, out: &mut BufWriter<Stdout>) {
+    let h = scan.next::<i16>();
+    let m = scan.next::<i16>();
+
+    let ans = (24 - (h + 1)) * 60 + (60 - m);
+    writeln!(out, "{}", ans).unwrap()
+}
+
 fn main() {
-    let mut sc = Scanner::default();
+    let mut scan = Scanner::default();
     let out = &mut BufWriter::new(stdout());
 
-    let n = sc.next();
-    let points: Vec<i32> = (0..n).map(|_| sc.next()).collect();
+    let mut t = scan.next::<i16>();
 
-    let mut max = points[0];
-    let mut min = points[0];
-    let mut cnt = 0;
-
-    for i in 1..n {
-        if points[i] > max {
-            max = points[i];
-            cnt += 1
-        } else if points[i] < min {
-            min = points[i];
-            cnt += 1
+    loop {
+        if t == 0 {
+            break;
         }
-    }
 
-    writeln!(out, "{}", cnt).unwrap()
+        solve(&mut scan, out);
+        t -= 1
+    }
 }
