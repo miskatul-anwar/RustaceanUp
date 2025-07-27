@@ -18,36 +18,42 @@ import { Button } from '../ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { Database, Filter, BarChart3, FileText } from 'lucide-react'
 
-// Custom node types
+// Custom node types with modern colors
 const nodeTypes = {
   source: {
     icon: Database,
-    color: 'bg-blue-500',
+    color: 'from-accent-blue to-accent-purple',
+    bgClass: 'bg-gradient-to-r from-accent-blue to-accent-purple',
     category: 'input'
   },
   transform: {
     icon: Filter,
-    color: 'bg-green-500',
+    color: 'from-green-500 to-emerald-500',
+    bgClass: 'bg-gradient-to-r from-green-500 to-emerald-500',
     category: 'process'
   },
   normalize1nf: {
     icon: BarChart3,
-    color: 'bg-yellow-500',
+    color: 'from-yellow-500 to-orange-500',
+    bgClass: 'bg-gradient-to-r from-yellow-500 to-orange-500',
     category: 'normalization'
   },
   normalize2nf: {
     icon: BarChart3,
-    color: 'bg-orange-500',
+    color: 'from-orange-500 to-red-500',
+    bgClass: 'bg-gradient-to-r from-orange-500 to-red-500',
     category: 'normalization'
   },
   normalize3nf: {
     icon: BarChart3,
-    color: 'bg-red-500',
+    color: 'from-red-500 to-pink-500',
+    bgClass: 'bg-gradient-to-r from-red-500 to-pink-500',
     category: 'normalization'
   },
   output: {
     icon: FileText,
-    color: 'bg-purple-500',
+    color: 'from-accent-purple to-accent-pink',
+    bgClass: 'bg-gradient-to-r from-accent-purple to-accent-pink',
     category: 'output'
   }
 }
@@ -146,59 +152,108 @@ export function ETLPipeline({ onPipelineChange }: ETLPipelineProps) {
   }
 
   return (
-    <div className="h-full flex">
+    <div className="h-full flex bg-gradient-to-br from-background via-background to-accent-purple/5">
       {/* Node Palette */}
-      <div className="w-64 bg-card border-r border-border p-4">
-        <h3 className="font-semibold mb-4">Pipeline Components</h3>
-        <div className="space-y-2">
+      <div className="w-72 bg-card/80 backdrop-blur-xl border-r border-border/50 p-6 shadow-modern">
+        <h3 className="font-serif font-semibold text-lg mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          Pipeline Components
+        </h3>
+        <div className="space-y-3">
           {Object.entries(nodeTypes).map(([type, config]) => (
             <Button
               key={type}
               variant="outline"
-              className="w-full justify-start gap-2"
+              className="w-full justify-start gap-3 p-4 h-auto bg-card/50 border-border/30 hover:bg-gradient-primary/10 hover:border-accent-purple/50 transition-all duration-300 group"
               onClick={() => addNode(type)}
             >
-              <config.icon className="w-4 h-4" />
-              {getNodeLabel(type)}
+              <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${config.bgClass} shadow-glow-sm group-hover:scale-110 transition-transform duration-300`}>
+                <config.icon className="w-4 h-4 text-white" />
+              </div>
+              <div className="text-left">
+                <div className="font-medium">{getNodeLabel(type)}</div>
+                <div className="text-xs text-muted-foreground">{getNodeDescription(type)}</div>
+              </div>
             </Button>
           ))}
         </div>
         
-        <Card className="mt-6">
+        <Card className="mt-8 shadow-modern border-border/50 bg-card/50 backdrop-blur-xl">
           <CardHeader className="pb-3">
-            <CardTitle className="text-sm">Compatibility Rules</CardTitle>
+            <CardTitle className="text-sm font-serif bg-gradient-primary bg-clip-text text-transparent">
+              Compatibility Rules
+            </CardTitle>
           </CardHeader>
-          <CardContent className="text-xs space-y-1">
-            <div>• Source → Transform, 1NF</div>
-            <div>• Transform → 1NF, Output</div>
-            <div>• 1NF → 2NF, Output</div>
-            <div>• 2NF → 3NF, Output</div>
-            <div>• 3NF → Output</div>
+          <CardContent className="text-xs space-y-2 text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-accent-blue rounded-full"></div>
+              <span>Source → Transform, 1NF</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>Transform → 1NF, Output</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+              <span>1NF → 2NF, Output</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+              <span>2NF → 3NF, Output</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span>3NF → Output</span>
+            </div>
           </CardContent>
         </Card>
       </div>
 
       {/* Flow Canvas */}
-      <div className="flex-1">
+      <div className="flex-1 relative">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-radial from-accent-purple/10 to-transparent opacity-50 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-gradient-radial from-accent-blue/10 to-transparent opacity-50 rounded-full blur-3xl"></div>
+        </div>
+        
         <ReactFlow
           nodes={nodes}
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
-          connectionLineStyle={{ stroke: '#374151', strokeWidth: 2 }}
+          connectionLineStyle={{ 
+            stroke: 'hsl(var(--accent-purple))', 
+            strokeWidth: 3,
+            strokeDasharray: '5,5'
+          }}
+          defaultEdgeOptions={{
+            style: { 
+              stroke: 'hsl(var(--accent-purple))', 
+              strokeWidth: 2 
+            },
+            type: 'smoothstep'
+          }}
           snapToGrid={true}
-          snapGrid={[15, 15]}
+          snapGrid={[20, 20]}
+          className="relative z-10"
         >
-          <Controls />
+          <Controls className="bg-card/80 backdrop-blur-xl border border-border/50 shadow-modern rounded-lg" />
           <MiniMap 
             nodeColor={(node) => {
               const nodeType = node.data.nodeType
-              return nodeTypes[nodeType as keyof typeof nodeTypes]?.color.replace('bg-', '#') || '#6b7280'
+              return `hsl(var(--accent-${nodeType === 'source' ? 'blue' : nodeType === 'output' ? 'purple' : 'pink'}))`
             }}
-            className="bg-background border border-border"
+            className="bg-card/80 backdrop-blur-xl border border-border/50 shadow-modern rounded-lg"
+            pannable
+            zoomable
           />
-          <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+          <Background 
+            variant={BackgroundVariant.Dots} 
+            gap={20} 
+            size={1.5} 
+            color="hsl(var(--border) / 0.3)"
+          />
         </ReactFlow>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { FileUpload } from './components/etl/file-upload'
 import { ETLPipeline } from './components/etl/etl-pipeline'
 import { ERDViewer } from './components/erd/erd-viewer'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
-import { Database, Settings, Info } from 'lucide-react'
+import { Database, Settings, Info, Share2 } from 'lucide-react'
 import type { Node, Edge } from 'reactflow'
 
 import './App.css'
@@ -63,20 +63,22 @@ function App() {
       case 'database':
         return (
           <div className="p-8">
-            <Card>
+            <Card className="shadow-modern-lg border-border/50 bg-card/80 backdrop-blur-xl">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Database className="w-5 h-5" />
-                  Database Operations
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="w-8 h-8 bg-gradient-blue-purple rounded-lg flex items-center justify-center shadow-glow-sm">
+                    <Database className="w-4 h-4 text-primary-foreground" />
+                  </div>
+                  <span className="bg-gradient-blue-purple bg-clip-text text-transparent">Database Operations</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Database operations and SQLite management will be displayed here.
                 </p>
                 {uploadedFile && (
-                  <div className="mt-4 p-4 bg-muted rounded-lg">
-                    <h4 className="font-medium">Current File</h4>
+                  <div className="mt-6 p-5 bg-gradient-primary/5 rounded-xl border border-border/30">
+                    <h4 className="font-medium text-foreground mb-2">Current File</h4>
                     <p className="text-sm text-muted-foreground">{uploadedFile.name}</p>
                   </div>
                 )}
@@ -95,12 +97,17 @@ function App() {
       case 'normalization':
         return (
           <div className="p-8">
-            <Card>
+            <Card className="shadow-modern-lg border-border/50 bg-card/80 backdrop-blur-xl">
               <CardHeader>
-                <CardTitle>Data Normalization</CardTitle>
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="w-8 h-8 bg-gradient-purple-pink rounded-lg flex items-center justify-center shadow-glow-sm">
+                    <Share2 className="w-4 h-4 text-primary-foreground" />
+                  </div>
+                  <span className="bg-gradient-purple-pink bg-clip-text text-transparent">Data Normalization</span>
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Data normalization (1NF, 2NF, 3NF) and functional dependency analysis will be displayed here.
                 </p>
               </CardContent>
@@ -122,15 +129,17 @@ function App() {
       case 'settings':
         return (
           <div className="p-8">
-            <Card>
+            <Card className="shadow-modern-lg border-border/50 bg-card/80 backdrop-blur-xl">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Settings className="w-5 h-5" />
-                  Settings
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow-sm">
+                    <Settings className="w-4 h-4 text-primary-foreground" />
+                  </div>
+                  <span className="bg-gradient-primary bg-clip-text text-transparent">Settings</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Application settings and preferences will be displayed here.
                 </p>
               </CardContent>
@@ -141,23 +150,25 @@ function App() {
       case 'help':
         return (
           <div className="p-8">
-            <Card>
+            <Card className="shadow-modern-lg border-border/50 bg-card/80 backdrop-blur-xl">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Info className="w-5 h-5" />
-                  Help & Documentation
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="w-8 h-8 bg-gradient-blue-purple rounded-lg flex items-center justify-center shadow-glow-sm">
+                    <Info className="w-4 h-4 text-primary-foreground" />
+                  </div>
+                  <span className="bg-gradient-blue-purple bg-clip-text text-transparent">Help & Documentation</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-medium">Getting Started</h4>
-                    <p className="text-sm text-muted-foreground">
-                      1. Upload a CSV or XLSX file<br/>
-                      2. Build your ETL pipeline<br/>
-                      3. Generate ERD diagrams<br/>
-                      4. Export results
-                    </p>
+                <div className="space-y-6">
+                  <div className="p-5 bg-gradient-primary/5 rounded-xl border border-border/30">
+                    <h4 className="font-serif font-medium text-lg mb-3 text-foreground">Getting Started</h4>
+                    <div className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+                      <p>1. Upload a CSV or XLSX file</p>
+                      <p>2. Build your ETL pipeline</p>
+                      <p>3. Generate ERD diagrams</p>
+                      <p>4. Export results</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -172,11 +183,19 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="etl-erd-theme">
-      <div className="h-screen bg-background text-foreground">
+      <div className="h-screen bg-gradient-to-br from-background via-background to-accent-blue/5 text-foreground relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-purple-pink opacity-20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-blue-purple opacity-20 rounded-full blur-3xl animate-float" style={{animationDelay: '3s'}}></div>
+        </div>
+
         {/* Header */}
-        <header className="fixed top-0 left-16 right-0 h-16 bg-card border-b border-border flex items-center justify-between px-6 z-30">
+        <header className="fixed top-0 left-16 right-0 h-16 bg-card/80 backdrop-blur-xl border-b border-border/50 flex items-center justify-between px-6 z-30 shadow-modern">
           <div>
-            <h1 className="text-xl font-serif font-bold">ETL & ERD System</h1>
+            <h1 className="text-xl font-serif font-bold bg-gradient-primary bg-clip-text text-transparent">
+              ETL & ERD System
+            </h1>
             <p className="text-sm text-muted-foreground">
               Extract, Transform, Load & Entity Relationship Diagrams
             </p>
@@ -188,7 +207,7 @@ function App() {
         <Sidebar onMenuSelect={setActiveMenu} activeMenu={activeMenu} />
 
         {/* Main Content */}
-        <main className="ml-16 pt-16 h-full">
+        <main className="ml-16 pt-16 h-full relative z-10">
           {renderContent()}
         </main>
       </div>
