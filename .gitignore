@@ -9,3 +9,12 @@ target/
 
 # Ignore all .cph directories
 # .cph/
+
+# ETL ERD System
+etl-erd-system/frontend/node_modules/
+etl-erd-system/frontend/dist/
+etl-erd-system/backend/__pycache__/
+etl-erd-system/backend/*.db
+etl-erd-system/backend/uploads/
+*.pyc
+*.pyo
